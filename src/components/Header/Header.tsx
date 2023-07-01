@@ -14,7 +14,7 @@ export default function Header() {
 
   useEffect(() => {
     const scrollHandler = () => {
-      if (window.pageYOffset > 0) {
+      if (window.scrollY > 0) {
         setTop(false);
       } else {
         setTop(true);
@@ -27,9 +27,9 @@ export default function Header() {
   }, [top]);
 
   return (
-    <div className="mx-auto">
+    <div>
       <div className="hidden lg:flex mx-auto  justify-between">
-        <div className="flex w-full justify-between items-center pl-[50px] xl:pl-[75px] pr-[30px] py-[75px]">
+        <div className="flex w-full justify-between items-center py-[75px]">
           <Link className={`${top || showMenu ? "" : "hidden"}`} href="/">
             <div className="hidden xl:block">
               <h1 className="text-2xl font-bold">
@@ -48,7 +48,7 @@ export default function Header() {
           </nav>
         </div>
 
-        <div className="flex gap-[30px] items-center pr-[35px] py-[35px] md:pr-[75px] md:py-[75px]">
+        <div className="flex gap-[30px] items-center py-[35px] md:py-[75px] pl-[30px]">
           {(showMenu || top) && <DonateButton />}
           {!top && (
             <div>

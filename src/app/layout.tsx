@@ -9,6 +9,8 @@ export const metadata = {
   description: "SLF Campaign Website",
 };
 
+// max-w-screen 1440px on Figma file
+
 export default function RootLayout({
   children,
 }: {
@@ -16,16 +18,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={rubik.className}>
-      <body className="flex flex-col w-full max-w-screen-[1440px] mx-auto overflow-visible">
-        <header className="top-0 z-10 fixed w-full">
-          <Header />
+      <body className="max-w-screen-[1440px] w-full overflow-auto">
+        <header className="top-0 z-10 bg-yellow-100">
+          <div className="w-[80%] mx-auto">
+            <Header />
+          </div>
         </header>
-
-        <main className="mt-[100px] lg:mt-[200px] grow">
-          <SWRConfigContext>{children}</SWRConfigContext>
-        </main>
-        <footer className="bg-[#69594E] w-full">
-          <Footer />
+        <main className="w-full grow max-w-screen-xl">{children}</main>
+        <footer className="w-full bottom-0 fixed">
+          <div className="mx-auto bg-green-200">
+            <Footer />
+          </div>
         </footer>
       </body>
     </html>
