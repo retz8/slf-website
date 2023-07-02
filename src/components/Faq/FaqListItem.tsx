@@ -4,6 +4,7 @@ import { Faq } from "@/model/faq";
 import React, { useState } from "react";
 import AnswerViewButton from "./AnswerViewButton";
 import { formKeywords } from "@/utils/hyperlinks/faqForms";
+import FaqQuestion from "./FaqQuestion";
 
 type Props = {
   faq: Faq;
@@ -34,43 +35,34 @@ export default function FaqListItem({ faq }: Props) {
 
     return (
       <p
-        className="break-words hyphens-auto max-w-[60%] lg:max-w-[90%] mx-[52px] lg:mx-[60px] text-[#69594E] text-opacity-75 text-[20px] lg:text-[25px] font-extrabold"
+        className="text-left break-words hyphens-auto max-w-[60%] lg:max-w-[90%] mx-[41px] md:mx-[60px] text-[#69594E] text-opacity-75 text-[18px] md:text-[20px] lg:text-[28px] font-extrabold"
         dangerouslySetInnerHTML={{ __html: modifiedAnswer }}
       ></p>
     );
   };
 
   const handleClick = () => {
-    console.log(showAnswer);
     setShowAnswer(!showAnswer);
   };
 
+  const accordionContentStyles = showAnswer
+    ? "py-6 max-h-[500px] transition-max-height duration-300 ease"
+    : "max-h-0 overflow-hidden transition-max-height duration-300 ease";
+
   return (
-    <div className="flex flex-col mx-10">
-      <div className="flex items-center justify-between py-5">
-        <div className="flex items-center ">
-          <p
-            className={`${
-              showAnswer ? "text-[#DA5149]" : "text-[#80AE3C]"
-            } text-[30px] lg:text-[40px] font-extrabold pr-5`}
-          >
-            Q.{" "}
-          </p>
-          <p className="text-[#69594E] text-[20px] lg:text-[28px] font-extrabold">
-            {question}
-          </p>
+    <div className="flex flex-col">
+      <button onClick={handleClick}>
+        <div className="cursor-pointer flex items-center justify-between py-5 space-x-10">
+          <FaqQuestion question={question} showAnswer={showAnswer} />
+          <div>
+            <AnswerViewButton showAnswer={showAnswer} />
+          </div>
         </div>
 
-        <div>
-          <AnswerViewButton onClick={handleClick} showAnswer={showAnswer} />
-        </div>
-      </div>
-
-      {showAnswer && (
-        <div className="flex items-center py-5 bg-[#E4C75E] bg-opacity-10 ">
+        <div className={`bg-[#E4C75E] bg-opacity-10 ${accordionContentStyles}`}>
           <div className="break-words">{renderAnswerWithLinks()}</div>
         </div>
-      )}
+      </button>
     </div>
   );
 }

@@ -15,8 +15,8 @@ export default function MobileHeader({ top }: Props) {
 
   return (
     <div className="mx-auto flex justify-between items-center py-10">
-      <div className="flex w-full justify-between items-center mx-5 ">
-        <Link className={`${!showMenu && top ? "" : "hidden"} pl-5`} href="/">
+      <div className="flex w-full justify-between items-center">
+        <Link className={`${!showMenu && top ? "" : "hidden"}`} href="/">
           <h1 className="text-xl font-[500]">Princeton SLF Initiative</h1>
         </Link>
       </div>

@@ -18,15 +18,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={rubik.className}>
-      <body className="max-w-screen-[1440px] w-full overflow-auto">
-        <header className="top-0 z-10 bg-yellow-100">
+      <body className="flex flex-col max-w-screen-[1440px] w-full overflow-auto">
+        <header className="top-0 z-10">
           <div className="w-[80%] mx-auto">
             <Header />
           </div>
         </header>
-        <main className="w-full grow max-w-screen-xl">{children}</main>
-        <footer className="w-full bottom-0 fixed">
-          <div className="mx-auto bg-green-200">
+        <main className="w-full max-w-screen-lg mx-auto grow">
+          <SWRConfigContext>{children}</SWRConfigContext>
+        </main>
+        <footer className="w-full bottom-0">
+          <div className="mx-auto">
             <Footer />
           </div>
         </footer>

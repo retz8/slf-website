@@ -7,7 +7,7 @@ import Navbar from "../shared/Navbar";
 
 export default function Footer() {
   return (
-    <div className="bg-blue-200">
+    <div className="bg-[#716157]">
       <nav className="hidden lg:flex py-[90px] items-center px-[50px]">
         <Navbar
           ulStyle="grid grid-cols-3 md:flex gap-x-[60px] gap-y-[30px] md:gap-[30px] pl-[0px] md:pl-[50px]"

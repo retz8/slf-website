@@ -4,9 +4,11 @@ import React from "react";
 
 export default function FAQPage() {
   return (
-    <section className="max-w-4xl mx-auto">
+    <section className="flex flex-col px-10 xl:px-5 h-full">
       <PageTitle text="FAQ" />
-      <FaqList />
+      <div className="h-full flex items-center justify-center">
+        <FaqList />
+      </div>
     </section>
   );
 }

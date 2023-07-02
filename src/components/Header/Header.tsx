@@ -5,7 +5,6 @@ import React, { useEffect, useState } from "react";
 import DonateButton from "./DonateButton";
 import MenuButton from "./MenuButton";
 import Navbar from "../shared/Navbar";
-import HorizontalNavbar from "../shared/HorizontalNavbar";
 import MobileHeader from "./MobileHeader";
 
 export default function Header() {
@@ -14,7 +13,7 @@ export default function Header() {
 
   useEffect(() => {
     const scrollHandler = () => {
-      if (window.scrollY > 0) {
+      if (window.pageYOffset > 0) {
         setTop(false);
       } else {
         setTop(true);
@@ -43,7 +42,7 @@ export default function Header() {
           <nav className={`${top || showMenu ? "" : "hidden"}`}>
             <Navbar
               ulStyle="flex gap-[20px] xl:gap-[30px] items-center"
-              textColor="text-[#749857]"
+              textColor="text-[#453938]"
             />
           </nav>
         </div>
