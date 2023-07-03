@@ -4,5 +4,6 @@ export type Member = {
   period: string;
   roles: string[];
   introduction?: string;
+  image: string;
   createdAt: string;
 };

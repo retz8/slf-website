@@ -12,7 +12,7 @@ export default function FaqList() {
 
   if (isLoading)
     return (
-      <div className="mb-10">
+      <div className="flex items-center mb-20">
         <DataLoadingSpinner />
       </div>
     );
