@@ -3,7 +3,7 @@ import React from "react";
 
 export default function GeneralInfoPage() {
   return (
-    <section className="max-w-4xl mx-auto">
+    <section className="flex flex-col px-10 xl:px-5 h-full">
       <PageTitle text="GENERAL INFO" />
     </section>
   );
