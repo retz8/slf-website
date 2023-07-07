@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={rubik.className}>
-      <body className="flex flex-col max-w-screen-[1440px] w-full overflow-auto">
+      <body className="relative flex flex-col max-w-screen-[1440px] w-full overflow-auto">
         <header className="top-0 z-10">
           <div className="w-[80%] mx-auto">
             <Header />

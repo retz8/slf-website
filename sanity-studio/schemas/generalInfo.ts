@@ -5,11 +5,33 @@
 // If there's no section title => normal paragraph
 // If there's section title => first paragraph of section
 
+const LOCATIONS = [
+  {title: 'Left', value: 'left'},
+  {title: 'Right', value: 'right'},
+]
+
 export default {
   title: 'General Info',
   name: 'generalInfo',
   type: 'document',
   fields: [
+    {
+      title: 'Title',
+      name: 'title',
+      type: 'document',
+      fields: [
+        {
+          title: 'Text',
+          name: 'text',
+          type: 'string',
+        },
+        {
+          title: 'Sub Text',
+          name: 'subText',
+          type: 'string',
+        },
+      ],
+    },
     {
       title: 'Introduction',
       name: 'introduction',
@@ -59,6 +81,11 @@ export default {
               title: 'Thumbnail',
               name: 'thumbnail',
               type: 'image',
+            },
+            {
+              title: 'Thumbnail Location',
+              name: 'thumbnailLocation',
+              type: 'string',
             },
           ],
         },
