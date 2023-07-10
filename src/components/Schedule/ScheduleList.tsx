@@ -1,14 +1,13 @@
 "use client";
 
-import { Faq } from "@/model/faq";
+import { Schedule } from "@/model/schedule";
 import React from "react";
 import useSWR from "swr";
-import FaqListItem from "./FaqListItem";
-import Divider from "../shared/Divider";
 import DataLoadingSpinner from "../ui/DataLoadingSpinner";
+import ScheduleListItem from "./ScheduleListItem";
 
-export default function FaqList() {
-  const { data, isLoading, error } = useSWR<Faq[]>("/api/faq");
+export default function ScheduleList() {
+  const { data, isLoading, error } = useSWR<Schedule[]>("/api/schedule");
 
   if (isLoading)
     return (
@@ -18,11 +17,10 @@ export default function FaqList() {
     );
 
   return (
-    <ul className="flex flex-col py-3 mb-10">
+    <ul className="flex flex-col">
       {data?.map((item) => (
         <li key={item.id}>
-          <FaqListItem faq={item} />
-          <Divider />
+          <ScheduleListItem schedule={item} />
         </li>
       ))}
     </ul>
