@@ -13,10 +13,10 @@ export default function TitleCard({ title }: Props) {
       className="flex flex-col p-10 rounded-[50px]
     border-solid border-2 border-lime-100 text-[#453938] "
     >
-      <p className="font-bold text-[20px] md:text-[25px] lg:text-[35px]">
+      <p className="font-bold text-[20px] md:text-[25px] xl:text-[30px] 2xl:text-[35px]">
         {text}
       </p>
-      <p className="italic text-[10px] md:text-[13px] lg:text-[19px]">
+      <p className="italic text-[10px] md:text-[13px] xl:text-[16px] 2xl:text-[19px]">
         {subText}
       </p>
     </div>
