@@ -2,7 +2,7 @@ import { IntroParagraph } from "@/model/generalInfo";
 import { urlFor } from "@/service/sanity";
 import Image from "next/image";
 import React from "react";
-import ParagraphText from "./ParagraphText";
+import ParagraphText from "../shared/ParagraphText";
 
 type Props = {
   introduction: IntroParagraph[];

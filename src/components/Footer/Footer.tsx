@@ -1,8 +1,6 @@
 "use client";
 
 import React from "react";
-import { menu } from "../../utils/navigation/menu";
-import Link from "next/link";
 import Navbar from "../shared/Navbar";
 
 export default function Footer() {

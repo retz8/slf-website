@@ -31,6 +31,7 @@ export default function MembersGridCard({ member, priority = false }: Props) {
           className="rounded-2xl object-cover "
           src={image}
           fill
+          priority={priority}
           alt={`${name} photo`}
         />
       </button>

@@ -1,7 +1,7 @@
 import { BodyParagraph } from "@/model/generalInfo";
 import React from "react";
-import ParagraphText from "./ParagraphText";
-import ParagraphSectionText from "./ParagraphSectionText";
+import ParagraphText from "../shared/ParagraphText";
+import ParagraphSectionText from "../shared/ParagraphSectionText";
 
 type Props = {
   paragraph: BodyParagraph;
