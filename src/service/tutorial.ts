@@ -1,4 +1,4 @@
-import { client } from "./sanity";
+import { client, urlFor } from "./sanity";
 
 //Egg Removal
 export async function getEggRemovalParagraphs() {
@@ -10,3 +10,15 @@ export async function getEggRemovalOtherResources() {
 }
 
 // Traps
+export async function getLfTrapsParagraphs() {
+  return client.fetch(`*[_type == "lfTraps"].paragraphs`);
+}
+
+export async function getLfTrapsThumbnails() {
+  return client.fetch(`*[_type == "lfTraps"].thumbnails`);
+}
+
+export async function getLfTrapsVideoTutorial() {
+  return client.fetch(`*[_type == "lfTraps"].videoTutorial{ videoUrl, sectionTitle }
+  `);
+}

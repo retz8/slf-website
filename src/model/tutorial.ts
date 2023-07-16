@@ -11,3 +11,8 @@ export type OtherResourceItem = {
   name: string;
   url: string;
 };
+
+export type LfTrapsVideoObject = {
+  sectionTitle: string;
+  videoUrl: string;
+};
