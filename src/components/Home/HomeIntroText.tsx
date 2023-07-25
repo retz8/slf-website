@@ -8,7 +8,7 @@ export default function HomeIntroText() {
     "text-[80px] md:text-[96px] lg:text-[108px] xl:text-[120px]";
 
   return (
-    <div className="z-10 flex gap-5 md:gap-8 lg:gap-9 ">
+    <div className="z-10 flex gap-3 md:gap-8 lg:gap-9 ">
       <p
         className={` ${outfit.className} ${largeTextStyle} text-black`}
       >{`"`}</p>

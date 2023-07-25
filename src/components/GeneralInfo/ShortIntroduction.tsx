@@ -25,12 +25,12 @@ export default function ShortIntroduction() {
         {firstParagraph &&
           splitIntoParts(firstParagraph).map((part, index) => (
             <div key={index} className="mb-2 py-4">
-              <p className="text-[#453938]">{part}</p>
+              <p className="text-[#453938] text-xl">{part}</p>
             </div>
           ))}
       </div>
 
-      <div className="lg:absolute lg:right-28 xl:right-48 flex">
+      <div className="lg:absolute lg:right-28 xl:right-48 2xl:right-96 flex">
         <Image
           className="object-cover"
           src={ltFlyPic}

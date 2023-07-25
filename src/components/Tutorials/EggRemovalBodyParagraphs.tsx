@@ -1,6 +1,4 @@
-import { BodyParagraph } from "@/model/generalInfo";
 import React from "react";
-import BodyParagraphItem from "../GeneralInfo/BodyParagraphItem";
 import BodyParagraphItemMulti from "./BodyParagraphItemMulti";
 import { MultiThumbnailsParagraph } from "@/model/tutorial";
 
