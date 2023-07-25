@@ -5,7 +5,7 @@ import { outfit } from "@/utils/fonts/globalFont";
 
 export default function HomeIntroText() {
   const largeTextStyle =
-    "text-[80px] md:text-[96px] lg:text-[108px] xl:text-vrlg";
+    "text-[80px] md:text-[96px] lg:text-[108px] xl:text-[120px]";
 
   return (
     <div className="z-10 flex gap-5 md:gap-8 lg:gap-9 ">
@@ -17,7 +17,7 @@ export default function HomeIntroText() {
         <EggsRemovedList />
       </div>
       <p
-        className={` ${outfit.className} pt-32 ${largeTextStyle} text-black`}
+        className={` ${outfit.className} pt-32 md:pt-36 ${largeTextStyle} text-black`}
       >{`"`}</p>
     </div>
   );

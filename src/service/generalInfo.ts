@@ -5,7 +5,7 @@ export async function getTitle() {
 }
 
 export async function getIntroduction() {
-  return client.fetch(`*[_type == "generalInfo"].introduction`);
+  return client.fetch(`*[_type == "generalInfo"][0].introduction`);
 }
 
 export async function getBodyParagraphs() {

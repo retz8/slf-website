@@ -1,11 +1,11 @@
 import BodyParagraphs from "@/components/GeneralInfo/BodyParagraphs";
 import Introduction from "@/components/GeneralInfo/Introduction";
-import OriginalArticleButton from "@/components/GeneralInfo/OriginalArticleButton";
 import SmallTitleView from "@/components/GeneralInfo/SmallTitleView";
 import TitleView from "@/components/GeneralInfo/TitleView";
 import PageTitle from "@/components/shared/PageTitle";
 import { urlFor } from "@/service/sanity";
 import { generalInfoApiURL } from "@/utils/baseApiURL";
+import LinkButton from "@/components/shared/LinkButton";
 
 // This page is "Static Side Generation"
 // Data is fixed
@@ -51,7 +51,10 @@ export default async function GeneralInfoPage() {
       <Introduction introduction={introduction[0]} />
       <BodyParagraphs body={body[0]} />
       <div className="flex justify-end py-5 mb-10">
-        <OriginalArticleButton />
+        <LinkButton
+          link="https://princetonperspectives.com/theyre-quieter-and-prettier-than-cicadas-but-spotted-lanternflies-are-a-nuisance/"
+          text="To view the original artical"
+        />
       </div>
     </section>
   );

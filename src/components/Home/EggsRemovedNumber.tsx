@@ -14,7 +14,7 @@ export default function EggsRemovedNumber() {
     <div className="flex flex-col">
       <p
         className={` ${outfit.className} 
-     text-[80px] md:text-[96px] lg:text-[108px] xl:text-vrlg 
+     text-[80px] md:text-[96px] lg:text-[108px] xl:text-[120px] 
     font-bold text-[#86BD08]`}
       >
         {isLoading ? "Princeton SLF" : formatNumberWithCommas(num)}

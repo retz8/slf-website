@@ -1,4 +1,7 @@
+import GeneralInfoSummary from "@/components/GeneralInfo/GeneralInfoSummary";
+import AboutUs from "@/components/Home/AboutUs";
 import HomeIntro from "@/components/Home/HomeIntro";
+import TutorialsSummary from "@/components/Tutorials/TutorialsSummary";
 
 export default function Home() {
   return (
@@ -14,11 +17,17 @@ export default function Home() {
         </div>
       </div>
 
-      <div>{/* About Us */}</div>
+      <div className="py-12 my-5 max-w-3xl w-full mx-auto flex justify-center">
+        <AboutUs />
+      </div>
 
-      <div>{/* General Info Summary */}</div>
+      <div className="md:mb-2 lg:mb-10">
+        <GeneralInfoSummary />
+      </div>
 
-      <div>{/* Tutorial Summary */}</div>
+      <div className="md:mb-2 lg:mb-10">
+        <TutorialsSummary />
+      </div>
 
       <div>{/* Schedule Summary */}</div>
 
