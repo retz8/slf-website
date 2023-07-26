@@ -25,7 +25,7 @@ export default function MembersCarousel() {
         {members?.map((member, i) => {
           return (
             <div
-              className="group max-h-72 flex-[0_0_33%] md:flex-[0_0_25%] lg:flex-[0_0_20%] aspect-square"
+              className="group max-h-72 flex-[0_0_50%] sm:flex-[0_0_33%] md:flex-[0_0_25%] lg:flex-[0_0_20%] aspect-square"
               key={i}
             >
               <div

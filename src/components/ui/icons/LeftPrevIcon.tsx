@@ -4,6 +4,6 @@ import React from "react";
 
 export default function LeftPrevIcon() {
   return (
-    <MdKeyboardDoubleArrowLeft className="fill-[#A7C081] hover:opacity-60 w-12 h-12" />
+    <MdKeyboardDoubleArrowLeft className="fill-[#A7C081] hover:opacity-60 w-8 h-8 md:w-12 md:h-12" />
   );
 }

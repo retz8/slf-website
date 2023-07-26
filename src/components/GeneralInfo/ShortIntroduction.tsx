@@ -15,7 +15,17 @@ export default function ShortIntroduction() {
     error,
   } = useSWR<IntroParagraph[]>("/api/generalInfo/intro");
 
-  if (isLoading) return <DataLoadingSpinner />;
+  if (isLoading)
+    return (
+      <div className="flex pt-3 md:pt-0 pb-5">
+        <p className="text-[#453938] text-xl">
+          As our town grows and changes, we want to make sure our community
+          stays healthy and that we look after our blossoming plants and
+          gardens. However, an insect called the spotted lanternfly is causing
+          our plants to be in peril!
+        </p>
+      </div>
+    );
 
   const firstParagraph = intro?.[0].text;
 
