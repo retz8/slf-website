@@ -3,7 +3,6 @@ import PageTitle from "../shared/PageTitle";
 import ShortIntroduction from "./ShortIntroduction";
 import LinkButton from "../shared/LinkButton";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function GeneralInfoSummary() {
   return (

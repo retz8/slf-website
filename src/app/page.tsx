@@ -1,8 +1,12 @@
+import FaqSummary from "@/components/Faq/FaqSummary";
 import GeneralInfoSummary from "@/components/GeneralInfo/GeneralInfoSummary";
 import AboutUs from "@/components/Home/AboutUs";
 import HomeIntro from "@/components/Home/HomeIntro";
+import MembersCarousel from "@/components/Members/MembersCarousel";
+import MembersSummary from "@/components/Members/MembersSummary";
 import ScheduleSummary from "@/components/Schedule/ScheduleSummary";
 import TutorialsSummary from "@/components/Tutorials/TutorialsSummary";
+import PageTitle from "@/components/shared/PageTitle";
 
 export default function Home() {
   return (
@@ -34,9 +38,19 @@ export default function Home() {
         <ScheduleSummary />
       </div>
 
-      <div className="md:mb-2 lg:mb-10">{/* MEmeber */}</div>
+      <div className="mb-0 md:mb-36 lg:mb-64">
+        <div className="flex">
+          <PageTitle text="Members" isSummary={true} />
+        </div>
 
-      <div className="md:mb-2 lg:mb-10">{/* Summary */}</div>
+        <div className="absolute w-screen left-0 flex -translate-y-10 md:-translate-y-8 lg:-translate-y-6  justify-center">
+          <MembersCarousel />
+        </div>
+      </div>
+
+      <div className="mt-48 md:mt-56 lg:mt-64 pt-36">
+        <FaqSummary />
+      </div>
     </section>
   );
 }

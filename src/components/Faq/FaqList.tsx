@@ -7,8 +7,14 @@ import FaqListItem from "./FaqListItem";
 import Divider from "../shared/Divider";
 import DataLoadingSpinner from "../ui/DataLoadingSpinner";
 
-export default function FaqList() {
-  const { data, isLoading, error } = useSWR<Faq[]>("/api/faq");
+type Props = {
+  isSummary?: boolean;
+};
+
+export default function FaqList({ isSummary = false }: Props) {
+  const { data, isLoading, error } = useSWR<Faq[]>(
+    `/api/faq${isSummary ? "/some" : ""}`
+  );
 
   if (isLoading)
     return (

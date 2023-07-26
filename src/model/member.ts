@@ -7,3 +7,5 @@ export type Member = {
   image: string;
   createdAt: string;
 };
+
+export type SimpleMember = Pick<Member, "name" | "period" | "roles">;

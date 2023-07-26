@@ -16,6 +16,7 @@ export default function HomeIntroImage() {
         src={image}
         width={800}
         height={800}
+        priority
         alt="main egg image"
       />
     </div>
