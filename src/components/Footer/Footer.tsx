@@ -10,6 +10,7 @@ export default function Footer() {
         <Navbar
           ulStyle="grid grid-cols-3 md:flex gap-x-[60px] gap-y-[30px] md:gap-[30px] pl-[0px] md:pl-[50px]"
           textColor="text-[#FFFFFA]"
+          isFooter={true}
         />
       </nav>
 

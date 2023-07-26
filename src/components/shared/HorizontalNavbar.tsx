@@ -9,7 +9,7 @@ export default function HorizontalNavbar() {
         <li key={item.href}>
           <Link href={item.href}>
             <p
-              className="text-base text-[#FFFFFA] font-extrabold tracking-wider opacity-25 
+              className="text-lg md:text-xl text-[#FFFFFA] font-extrabold tracking-wider opacity-25 
             active:opacity-100 hover:opacity-100"
             >
               {item.text}

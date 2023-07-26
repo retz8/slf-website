@@ -12,13 +12,33 @@ export default function EggsRemovedNumber() {
 
   return (
     <div className="flex flex-col">
-      <p
-        className={` ${outfit.className} 
+      {isLoading ? (
+        <div className="flex">
+          <p
+            className={` hidden sm:block${outfit.className} 
      text-[80px] md:text-[96px] lg:text-[108px] xl:text-[120px] 
     font-bold text-[#86BD08]`}
-      >
-        {isLoading ? "Princeton SLF" : formatNumberWithCommas(num)}
-      </p>
+          >
+            Princeton SLF
+          </p>
+          <p
+            className={` block sm:hidden ${outfit.className} 
+     text-[80px] md:text-[96px] lg:text-[108px] xl:text-[120px] 
+    font-bold text-[#86BD08]`}
+          >
+            SLF
+            {/* maybe put logo instead */}
+          </p>
+        </div>
+      ) : (
+        <p
+          className={` ${outfit.className} 
+     text-[80px] md:text-[96px] lg:text-[108px] xl:text-[120px] 
+    font-bold text-[#86BD08]`}
+        >
+          {formatNumberWithCommas(num)}
+        </p>
+      )}
       {!isLoading && (
         <p
           className={`text-[#453938] ${outfit.className} 

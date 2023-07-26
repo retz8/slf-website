@@ -15,14 +15,17 @@ export default function Home() {
         {/* Main Slogan */}
         <div
           className="absolute w-[80vw] inset-0 blur-3xl bg-[#E8FFAD] bg-opacity-75
-          left-1/2 transform -translate-x-1/2"
+          left-1/2 transform -translate-x-1/2 h-[85%] lg:h-full"
         ></div>
         <div className="relative z-10">
           <HomeIntro />
         </div>
       </div>
 
-      <div className="py-12 my-5 max-w-3xl w-full mx-auto flex justify-center">
+      <div
+        className="pb-12 pt-0 lg:pt-12 my-0 lg:my-5 
+      max-w-3xl w-full mx-auto flex justify-center"
+      >
         <AboutUs />
       </div>
 
@@ -48,7 +51,10 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-48 md:mt-56 lg:mt-64 pt-36">
+      <div
+        className="mt-48 sm:mt-52 md:mt-56 lg:mt-64 
+      pt-48 lg:pt-36"
+      >
         <FaqSummary />
       </div>
     </section>

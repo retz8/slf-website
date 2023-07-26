@@ -12,7 +12,7 @@ export default function HomeIntroText() {
       <p
         className={` ${outfit.className} ${largeTextStyle} text-black`}
       >{`"`}</p>
-      <div className="flex flex-col py-5 mt-5">
+      <div className="flex flex-col pt-5 mt-5">
         <EggsRemovedNumber />
         <EggsRemovedList />
       </div>

@@ -26,7 +26,7 @@ export default function Header() {
   }, [top]);
 
   return (
-    <div>
+    <div className="w-full ">
       <div className="hidden lg:flex mx-auto  justify-between">
         <div className="flex w-full justify-between items-center py-[65px]">
           <Link className={`${top || showMenu ? "" : "hidden"}`} href="/">
@@ -60,8 +60,9 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="lg:hidden">
-        <MobileHeader top={top} />
+      <div className="lg:hidden py-10">
+        {/* Wrap MobileHeader in a div and set it to have a fixed height */}
+        <MobileHeader />
       </div>
     </div>
   );

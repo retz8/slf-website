@@ -53,7 +53,7 @@ export default async function GeneralInfoPage() {
       <div className="flex justify-end py-5 mb-10">
         <LinkButton
           link="https://princetonperspectives.com/theyre-quieter-and-prettier-than-cicadas-but-spotted-lanternflies-are-a-nuisance/"
-          text="To view the original artical"
+          text="To view the original article"
         />
       </div>
     </section>
