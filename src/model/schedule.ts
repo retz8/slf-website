@@ -1,5 +1,9 @@
 export type Schedule = {
-  id: string;
+  thumbnail: string;
+  scheduleList: ScheduleItem[];
+};
+
+export type ScheduleItem = {
   start: string;
   end: string;
   text: string;

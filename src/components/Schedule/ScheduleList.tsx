@@ -1,25 +1,16 @@
-"use client";
-
-import { Schedule } from "@/model/schedule";
 import React from "react";
-import useSWR from "swr";
-import DataLoadingSpinner from "../ui/DataLoadingSpinner";
 import ScheduleListItem from "./ScheduleListItem";
+import { ScheduleItem } from "@/model/schedule";
 
-export default function ScheduleList() {
-  const { data, isLoading, error } = useSWR<Schedule[]>("/api/schedule");
+type Props = {
+  data: ScheduleItem[];
+};
 
-  if (isLoading)
-    return (
-      <div className="flex items-center mb-20">
-        <DataLoadingSpinner />
-      </div>
-    );
-
+export default function ScheduleList({ data }: Props) {
   return (
-    <ul className="flex flex-col">
-      {data?.map((item) => (
-        <li key={item.id}>
+    <ul className="flex flex-col items-start gap-8 min-w-[40%]">
+      {data?.map((item, index) => (
+        <li key={index}>
           <ScheduleListItem schedule={item} />
         </li>
       ))}

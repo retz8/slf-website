@@ -8,3 +8,7 @@ export function splitIntoParts(paragraph: string): string[] {
   }
   return parts;
 }
+
+export function addHyphenBetweenStrings(str1: string, str2: string): string {
+  return str1 + " - " + str2;
+}

@@ -1,18 +1,19 @@
-import { Schedule } from "@/model/schedule";
+import { ScheduleItem } from "@/model/schedule";
+import { addHyphenBetweenStrings } from "@/utils/textFormatters";
 import React from "react";
 
 type Props = {
-  schedule: Schedule;
+  schedule: ScheduleItem;
 };
 
 export default function ScheduleListItem({ schedule }: Props) {
   const { start, end, text } = schedule;
+  const dateString = addHyphenBetweenStrings(start, end);
 
   return (
-    <div>
-      <p>{start}</p>
-      <p>{end}</p>
-      <p>{text}</p>
+    <div className="flex flex-col ">
+      <p className="text-lg md:text-xl text-[#453938]">{dateString}</p>
+      <p className="text-lg md:text-xl text-[#453938] mt-2">{text}</p>
     </div>
   );
 }
