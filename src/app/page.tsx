@@ -1,6 +1,7 @@
 import GeneralInfoSummary from "@/components/GeneralInfo/GeneralInfoSummary";
 import AboutUs from "@/components/Home/AboutUs";
 import HomeIntro from "@/components/Home/HomeIntro";
+import ScheduleSummary from "@/components/Schedule/ScheduleSummary";
 import TutorialsSummary from "@/components/Tutorials/TutorialsSummary";
 
 export default function Home() {
@@ -29,11 +30,13 @@ export default function Home() {
         <TutorialsSummary />
       </div>
 
-      <div>{/* Schedule Summary */}</div>
+      <div className="md:mb-2 lg:mb-10">
+        <ScheduleSummary />
+      </div>
 
-      <div>{/* Memeber Summary */}</div>
+      <div className="md:mb-2 lg:mb-10">{/* MEmeber */}</div>
 
-      <div>{/* Faq Summary */}</div>
+      <div className="md:mb-2 lg:mb-10">{/* Summary */}</div>
     </section>
   );
 }

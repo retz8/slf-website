@@ -8,7 +8,7 @@ type Props = {
 
 export default function ScheduleList({ data }: Props) {
   return (
-    <ul className="flex flex-col items-start gap-8 min-w-[40%]">
+    <ul className="flex flex-col items-start gap-8 min-w-[45%]">
       {data?.map((item, index) => (
         <li key={index}>
           <ScheduleListItem schedule={item} />
