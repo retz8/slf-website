@@ -10,6 +10,16 @@ export const menu = [
   {
     href: "/tutorials",
     text: "TUTORIALS",
+    submenu: [
+      {
+        href: "/tutorials/egg-removal",
+        text: "Egg Removal",
+      },
+      {
+        href: "/tutorials/lf-traps",
+        text: "Lanternfly Traps",
+      },
+    ],
   },
   {
     href: "/schedule",
@@ -24,3 +34,8 @@ export const menu = [
     text: "FAQ",
   },
 ];
+
+export type MenuObjectType = {
+  href: string;
+  text: string;
+};

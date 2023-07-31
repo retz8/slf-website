@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+"react";
 import useSWR from "swr";
 import Image from "next/image";
 

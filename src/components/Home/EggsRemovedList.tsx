@@ -1,7 +1,7 @@
 "use client";
 
 import { EggsRemovedByYearPair } from "@/model/home";
-import React from "react";
+("react");
 import useSWR from "swr";
 import EggsRemovedListItem from "./EggsRemovedListItem";
 

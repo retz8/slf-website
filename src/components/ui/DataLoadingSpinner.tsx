@@ -1,4 +1,4 @@
-import React from "react";
+"react";
 import { PulseLoader } from "react-spinners";
 
 type Props = {

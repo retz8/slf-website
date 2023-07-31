@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import RightArrowIcon from "../ui/icons/RightArrowIcon";
 
 type Props = {

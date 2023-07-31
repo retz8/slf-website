@@ -1,4 +1,4 @@
-import React from "react";
+"react";
 import CloseIcon from "../ui/icons/CloseIcon";
 
 type Props = {

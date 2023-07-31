@@ -1,5 +1,5 @@
 import { OtherResourceItem } from "@/model/tutorial";
-import React from "react";
+("react");
 import ParagraphSectionText from "../shared/ParagraphSectionText";
 import Link from "next/link";
 import OtherResourcesItem from "./OtherResourcesItem";

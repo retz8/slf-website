@@ -1,5 +1,5 @@
 import { EggsRemovedByYearPair } from "@/model/home";
-import React from "react";
+("react");
 import ListDotIcon from "../ui/icons/ListDotIcon";
 import { formatNumberWithAbbreviation } from "@/utils/numberFormatter";
 
@@ -19,7 +19,7 @@ export default function EggsRemovedListItem({ dataPair, index }: Props) {
   return (
     <div className={`${index > 0 ? "ml-5" : ""} flex items-center`}>
       <ListDotIcon />
-      <p className="ml-5 italic text-[#453938] text-[22px] font-light">
+      <p className="ml-5 italic text-dark-brown text-[22px] font-light">
         {outputString}
       </p>
     </div>

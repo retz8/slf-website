@@ -26,7 +26,7 @@ export default function Carousel({ children, ...options }: Props) {
   const canScrollPrev = !!emblaApi?.canScrollPrev();
 
   return (
-    <div className="w-full flex flex-col items-end ">
+    <div className="w-full flex flex-col items-end">
       <div
         className="flex right-0 mr-8 sm:mr-16 md:mr-28  lg:mr-36 
       mb-8 lg:mb-10"

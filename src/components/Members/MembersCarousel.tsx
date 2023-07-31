@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+"react";
 import useSWR from "swr";
 import Carousel from "./Carousel";
 import DataLoadingSpinner from "../ui/DataLoadingSpinner";
@@ -20,7 +20,7 @@ export default function MembersCarousel() {
   });
 
   return (
-    <div className="flex flex-col w-full items-center">
+    <div className="flex flex-col max-w-screen-2xl w-full items-center">
       <Carousel loop>
         {members?.map((member, i) => {
           return (
@@ -37,7 +37,7 @@ export default function MembersCarousel() {
               >
                 <CarouselItem image={member.image} />
                 <div
-                  className="absolute inset-0 flex aspect-square p-5 md:p-7 lg:p-10 rounded-2xl bg-[#716157]
+                  className="absolute inset-0 flex aspect-square p-5 md:p-7 lg:p-10 rounded-2xl bg-less-dark-brown
               [transform:rotateY(180deg)] [backface-visibility:hidden]"
                 >
                   <CarouselItemFlip

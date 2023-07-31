@@ -1,4 +1,4 @@
-import React from "react";
+"react";
 import TutorialsLinkGridItem from "./TutorialsLinkGridItem";
 
 const tutorials = [

@@ -1,7 +1,7 @@
 "use client";
 
 import { OtherResourceItem } from "@/model/tutorial";
-import React from "react";
+("react");
 
 export default function OtherResourcesItem({ name, url }: OtherResourceItem) {
   const navigateToLink = () => {

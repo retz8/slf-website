@@ -3,10 +3,11 @@ import GeneralInfoSummary from "@/components/GeneralInfo/GeneralInfoSummary";
 import AboutUs from "@/components/Home/AboutUs";
 import HomeIntro from "@/components/Home/HomeIntro";
 import MembersCarousel from "@/components/Members/MembersCarousel";
-import MembersSummary from "@/components/Members/MembersSummary";
 import ScheduleSummary from "@/components/Schedule/ScheduleSummary";
 import TutorialsSummary from "@/components/Tutorials/TutorialsSummary";
 import PageTitle from "@/components/shared/PageTitle";
+
+// 이 페이지를 ISR로 바꿀 필요가 있다.
 
 export default function Home() {
   return (
@@ -46,7 +47,10 @@ export default function Home() {
           <PageTitle text="Members" isSummary={true} />
         </div>
 
-        <div className="absolute w-screen left-0 flex -translate-y-10 md:-translate-y-8 lg:-translate-y-6  justify-center">
+        <div
+          className="absolute w-full
+         left-0 flex -translate-y-10 md:-translate-y-8 lg:-translate-y-6  justify-center"
+        >
           <MembersCarousel />
         </div>
       </div>

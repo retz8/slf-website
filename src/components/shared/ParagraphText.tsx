@@ -1,6 +1,6 @@
 import { urlFor } from "@/service/sanity";
 import Image from "next/image";
-import React from "react";
+("react");
 
 type Props = {
   text: string;

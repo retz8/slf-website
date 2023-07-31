@@ -1,4 +1,4 @@
-import React from "react";
+"react";
 
 type Props = {
   question: string;

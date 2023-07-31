@@ -1,9 +1,12 @@
+"use client";
+
 type Props = {
   color?: string;
 };
 
 export default function DonateButton({ color = "bg-[#D76B64]" }: Props) {
   const navigateToGoFundMe = () => {
+    // If you want to change donate link, please change a link below
     window.open(
       "https://www.gofundme.com/f/princeton-spotted-lanternfly-iniative",
       "_blank"

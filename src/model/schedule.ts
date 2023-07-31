@@ -1,4 +1,4 @@
-export type Schedule = {
+export type FullSchedule = {
   thumbnail: string;
   scheduleList: ScheduleItem[];
 };

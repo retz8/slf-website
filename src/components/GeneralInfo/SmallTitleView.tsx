@@ -1,6 +1,6 @@
 import { ParagraphTitle } from "@/model/generalInfo";
 import Image from "next/image";
-import React from "react";
+("react");
 import TitleCard from "./TitleCard";
 
 type Props = {

@@ -1,4 +1,4 @@
-import React from "react";
+"react";
 import LinkButton from "../shared/LinkButton";
 import Link from "next/link";
 import TutorialMainImage from "./TutorialMainImage";

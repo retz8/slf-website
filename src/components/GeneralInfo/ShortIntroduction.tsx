@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+"react";
 import useSWR from "swr";
 import DataLoadingSpinner from "../ui/DataLoadingSpinner";
 import { IntroParagraph } from "@/model/generalInfo";
@@ -18,7 +18,7 @@ export default function ShortIntroduction() {
   if (isLoading)
     return (
       <div className="flex pt-3 md:pt-0 pb-5">
-        <p className="text-[#453938] text-xl">
+        <p className="text-dark-brown text-xl">
           As our town grows and changes, we want to make sure our community
           stays healthy and that we look after our blossoming plants and
           gardens. However, an insect called the spotted lanternfly is causing
@@ -35,7 +35,7 @@ export default function ShortIntroduction() {
         {firstParagraph &&
           splitIntoParts(firstParagraph).map((part, index) => (
             <div key={index} className="mb-2 py-4">
-              <p className="text-[#453938] text-xl">{part}</p>
+              <p className="text-dark-brown text-xl">{part}</p>
             </div>
           ))}
       </div>

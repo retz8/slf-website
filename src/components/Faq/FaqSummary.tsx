@@ -1,4 +1,4 @@
-import React from "react";
+"react";
 import PageTitle from "../shared/PageTitle";
 import FaqList from "./FaqList";
 import Link from "next/link";

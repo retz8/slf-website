@@ -1,4 +1,4 @@
-import React from "react";
+"react";
 import ScheduleListItem from "./ScheduleListItem";
 import { ScheduleItem } from "@/model/schedule";
 

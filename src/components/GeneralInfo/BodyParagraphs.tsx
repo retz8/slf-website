@@ -1,5 +1,5 @@
 import { BodyParagraph } from "@/model/generalInfo";
-import React from "react";
+("react");
 import BodyParagraphItem from "./BodyParagraphItem";
 
 type Props = {

@@ -1,7 +1,7 @@
 import { IntroParagraph } from "@/model/generalInfo";
 import { urlFor } from "@/service/sanity";
 import Image from "next/image";
-import React from "react";
+("react");
 import ParagraphText from "../shared/ParagraphText";
 
 type Props = {

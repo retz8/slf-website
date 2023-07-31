@@ -1,6 +1,6 @@
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
-import React from "react";
+("react");
 
 export default function RightNextIcon() {
   return (

@@ -1,7 +1,7 @@
 "use client";
 
 import { Faq } from "@/model/faq";
-import React, { useState } from "react";
+import { useState } from "react";
 import AnswerViewButton from "./AnswerViewButton";
 import { formKeywords } from "@/utils/hyperlinks/faqForms";
 import FaqQuestion from "./FaqQuestion";

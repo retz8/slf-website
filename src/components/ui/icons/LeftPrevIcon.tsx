@@ -1,6 +1,6 @@
 import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
 
-import React from "react";
+("react");
 
 export default function LeftPrevIcon() {
   return (

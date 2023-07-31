@@ -1,4 +1,4 @@
-import React from "react";
+"react";
 import BodyParagraphItemMulti from "./BodyParagraphItemMulti";
 import { MultiThumbnailsParagraph } from "@/model/tutorial";
 

@@ -1,4 +1,4 @@
-import React from "react";
+"react";
 import PageTitle from "../shared/PageTitle";
 import ShortIntroduction from "./ShortIntroduction";
 import LinkButton from "../shared/LinkButton";

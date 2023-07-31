@@ -1,4 +1,4 @@
-import React from "react";
+"react";
 import { menu } from "@/utils/navigation/menu";
 import Link from "next/link";
 import TutorialsDropdown from "./TutorialsDropdown";
@@ -31,37 +31,39 @@ export default function Navbar({
 
   return (
     <ul className={`relative ${ulStyle}`}>
-      {menu.map(({ href, text }) =>
-        href === "/tutorials" ? (
+      {menu.map((item) =>
+        item.href === "/tutorials" ? (
           isFooter ? (
             <Link href="/tutorials/egg-removal">
               <p
                 className={`peer text-xs md:text-base ${textColor} font-extrabold cursor-pointer`}
               >
-                {text}
+                {item.text}
               </p>
             </Link>
           ) : (
-            <li key={href} className=" flex flex-col items-center">
+            <li key={item.href} className=" flex flex-col items-center">
               <p
                 className={`peer text-xs md:text-base ${textColor} font-extrabold cursor-pointer`}
               >
-                {text}
+                {item.text}
               </p>
               <div
                 className="absolute top-0 mt-5 hidden peer-hover:flex hover:flex 
-            flex-col items-center "
+              flex-col items-center"
               >
                 <DownIcon />
-                <TutorialsDropdown />
+                {item.submenu !== undefined && (
+                  <TutorialsDropdown submenus={item.submenu} />
+                )}
               </div>
             </li>
           )
         ) : (
-          <li key={href} className=" flex flex-col items-center">
-            <Link href={href} className="peer">
+          <li key={item.href} className=" flex flex-col items-center">
+            <Link href={item.href} className="peer">
               <p className={`text-xs md:text-base ${textColor} font-extrabold`}>
-                {text}
+                {item.text}
               </p>
             </Link>
           </li>

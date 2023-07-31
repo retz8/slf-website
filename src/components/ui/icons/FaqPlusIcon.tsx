@@ -1,4 +1,4 @@
-import React from "react";
+"react";
 import { GoPlus } from "react-icons/go";
 
 export default function FaqPlusIcon() {

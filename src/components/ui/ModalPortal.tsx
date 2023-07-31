@@ -1,4 +1,4 @@
-import React from "react";
+"react";
 import { createPortal } from "react-dom";
 
 type Props = {

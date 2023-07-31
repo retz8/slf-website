@@ -1,4 +1,4 @@
-import React from "react";
+"react";
 import Image from "next/image";
 
 type Props = {

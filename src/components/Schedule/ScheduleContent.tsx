@@ -1,7 +1,6 @@
 "use client";
 
-import { Schedule } from "@/model/schedule";
-import React from "react";
+import { FullSchedule } from "@/model/schedule";
 import useSWR from "swr";
 import DataLoadingSpinner from "../ui/DataLoadingSpinner";
 import ScheduleList from "./ScheduleList";
@@ -10,24 +9,19 @@ import Link from "next/link";
 import LinkButton from "../shared/LinkButton";
 
 type Props = {
+  fullSchedule: FullSchedule;
   isSummary?: boolean;
 };
 
-export default function ScheduleContent({ isSummary = false }: Props) {
-  const { data, isLoading, error } = useSWR<Schedule>("/api/schedule");
-
-  if (isLoading)
-    return (
-      <div className="flex items-center mb-20">
-        <DataLoadingSpinner />
-      </div>
-    );
-
+export default function ScheduleContent({
+  fullSchedule,
+  isSummary = false,
+}: Props) {
   return (
     <div className="flex flex-col lg:flex-row gap-10">
       <div className="flex flex-col items-center lg:items-start">
-        {data?.scheduleList !== undefined && (
-          <ScheduleList data={data?.scheduleList} />
+        {fullSchedule?.scheduleList !== undefined && (
+          <ScheduleList data={fullSchedule?.scheduleList} />
         )}
         {isSummary && (
           <Link href="/schedule" className="hidden lg:block mt-20">
@@ -36,8 +30,8 @@ export default function ScheduleContent({ isSummary = false }: Props) {
         )}
       </div>
       <div className=" p-0 md:p-6 lg:p-0">
-        {data?.thumbnail !== undefined && (
-          <ScheduleImage image={data?.thumbnail} />
+        {fullSchedule?.thumbnail !== undefined && (
+          <ScheduleImage image={fullSchedule?.thumbnail} />
         )}
       </div>
 

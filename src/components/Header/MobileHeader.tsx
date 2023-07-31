@@ -12,16 +12,14 @@ export default function MobileHeader() {
 
   useEffect(() => {
     const scrollHandler = () => {
-      if (window.pageYOffset > 0) {
+      if (window.scrollY > 0) {
         setTop(false);
       } else {
         setTop(true);
       }
-      //Swindow.pageYOffset > 0 ? setTop(false) : setTop(true);
     };
-    window.addEventListener("scroll", scrollHandler);
-    console.log(top);
 
+    window.addEventListener("scroll", scrollHandler);
     return () => window.removeEventListener("scroll", scrollHandler);
   }, [top]);
 
@@ -31,17 +29,24 @@ export default function MobileHeader() {
         <h1 className="hidden text-xl font-[500]">Princeton SLF Initiative</h1>
       </div>
 
+      {/* Side NavBar (activates when menu button is clicked) */}
       <div
         className={`${
           showMenu ? "" : "hidden"
         } absolute right-0 top-0 -translate-y-10 flex w-full translate-x-12 xs:translate-x-16 sm:translate-x-20 z-10`}
       >
         <div className="w-1/6 sd:w-2/6 md:w-3/6 h-screen"></div>
-        <div className="w-5/6 sd:w-4/6 md:w-3/6  flex flex-col pl-10 justify-center bg-[#716157] rounded-tl-[5rem] h-screen">
+        <div
+          className="w-5/6 sd:w-4/6 md:w-3/6 
+        flex flex-col pl-10 justify-center
+         bg-less-dark-brown rounded-tl-[5rem] h-screen"
+        >
           <HorizontalNavbar />
           <DonateButton color="bg-[#80AE3C]" />
         </div>
       </div>
+
+      {/* Menu Button fixed at the top */}
       <div className="sticky top-0 z-10">
         <MenuButton
           showMenu={showMenu}

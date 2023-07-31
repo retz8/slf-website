@@ -1,4 +1,4 @@
-import React from "react";
+"react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoClose } from "react-icons/io5";
 

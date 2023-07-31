@@ -1,4 +1,4 @@
-import React from "react";
+"react";
 import ParagraphText from "../shared/ParagraphText";
 
 type Props = {
