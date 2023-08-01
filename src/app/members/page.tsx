@@ -2,39 +2,56 @@
 
 import MembersGrid from "@/components/Members/MembersGrid";
 import PageTitle from "@/components/shared/PageTitle";
+import { Member } from "@/model/member";
+import { getAllMembers } from "@/service/member";
 import { oneMonth } from "@/utils/revalidateConstants";
-import { Metadata } from "next";
+import { GetStaticProps, InferGetStaticPropsType, Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Members",
   description: "Members of Princeton SLF Initiative Group",
 };
 
-const MembersPage = async () => {
-  const res = await fetch(`${process.env.WEBSITE_URL}/api/members`, {
-    next: { revalidate: oneMonth },
-  });
+export default async function MembersPage() {
+  // const res = await fetch("/api/members", {
+  //   next: { revalidate: oneMonth },
+  // });
 
-  // handle error
-  if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error("Failed to fetch data");
-  }
-  console.log(res);
+  // // handle error
+  // if (!res.ok) {
+  //   // This will activate the closest `error.js` Error Boundary
+  //   throw new Error("Failed to fetch data");
+  // }
+  // console.log(res);
 
-  const data = await res.json();
+  // const data = await res.json();
 
-  console.log(data);
+  // console.log(data);
+
+  const members = await getAllMembers();
+  console.log(members);
 
   return (
     <section className="flex flex-col">
       <PageTitle text="MEMBERS" />
 
       <div className="h-full flex justify-center mb-10">
-        <MembersGrid members={data} />
+        <MembersGrid members={members} />
       </div>
     </section>
   );
-};
+}
 
-export default MembersPage;
+// export const getStaticProps: GetStaticProps<{
+//   members: Member[];
+// }> = async () => {
+//   console.log("check");
+//   const members = await getAllMembers();
+
+//   console.log(members);
+//   return {
+//     props: {
+//       members,
+//     },
+//   };
+// };
