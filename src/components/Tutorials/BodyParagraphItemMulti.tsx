@@ -1,4 +1,3 @@
-"react";
 import ParagraphText from "../shared/ParagraphText";
 import ParagraphSectionText from "../shared/ParagraphSectionText";
 import { MultiThumbnailsParagraph } from "@/model/tutorial";

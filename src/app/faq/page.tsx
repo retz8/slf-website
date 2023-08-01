@@ -2,7 +2,7 @@
 
 import FaqList from "@/components/Faq/FaqList";
 import PageTitle from "@/components/shared/PageTitle";
-import { oneWeek } from "@/utils/revalidateConstants";
+import { twoWeeks } from "@/utils/revalidateConstants";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default async function FAQPage() {
   const res = await fetch(`${process.env.DEV_WEBSITE_URL}/api/faq`, {
-    next: { revalidate: oneWeek },
+    next: { revalidate: twoWeeks },
   });
 
   // handle error

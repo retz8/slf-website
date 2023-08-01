@@ -1,20 +1,28 @@
-// /tutorials/egg-removal
+// ISR (revalidate: 1 month)
 
 import OtherResourcesList from "@/components/Tutorials/OtherResourcesList";
 import EggRemovalBodyParagraphs from "@/components/Tutorials/EggRemovalBodyParagraphs";
 import PageTitle from "@/components/shared/PageTitle";
 import { tutorialsApiURL } from "@/utils/baseApiURL";
+import { Metadata } from "next";
+import { oneMonth } from "@/utils/revalidateConstants";
 
-// This page is "Static Side Generation"
-// Data is fixed
+export const metadata: Metadata = {
+  title: "Egg Removal",
+  description: "How to remove Lanternfly eggs",
+};
 
 async function getParagraphs() {
-  const res = await fetch(`${tutorialsApiURL}/egg-removal/paragraphs`);
+  const res = await fetch(`${tutorialsApiURL}/egg-removal/paragraphs`, {
+    next: { revalidate: oneMonth },
+  });
   return res.json();
 }
 
 async function getResources() {
-  const res = await fetch(`${tutorialsApiURL}/egg-removal/resources`);
+  const res = await fetch(`${tutorialsApiURL}/egg-removal/resources`, {
+    next: { revalidate: oneMonth },
+  });
   return res.json();
 }
 
@@ -32,7 +40,7 @@ export default async function EggRemovalPage() {
       <PageTitle text="EGG REMOVAL" />
       <EggRemovalBodyParagraphs body={paragraphs[0]} />
       <div className="lg:absolute lg:bottom-0 lg:pb-20">
-        <OtherResourcesList resource={resources[0]} />
+        <OtherResourcesList resources={resources[0]} />
       </div>
     </section>
   );

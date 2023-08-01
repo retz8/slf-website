@@ -1,5 +1,3 @@
-"react";
-
 type Props = {
   text: string;
 };

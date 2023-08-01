@@ -27,22 +27,22 @@ async function getBody() {
 
 export default async function GeneralInfoPage() {
   // render data
-  const generalInfoTitle = getTitle();
-  const generalInfoIntro = getIntroduction();
-  const generalInfoBody = getBody();
+  // const generalInfoTitle = getTitle();
+  // const generalInfoIntro = getIntroduction();
+  // const generalInfoBody = getBody();
 
-  const [title, introduction, body] = await Promise.all([
-    generalInfoTitle,
-    generalInfoIntro,
-    generalInfoBody,
-  ]);
+  // const [title, introduction, body] = await Promise.all([
+  //   generalInfoTitle,
+  //   generalInfoIntro,
+  //   generalInfoBody,
+  // ]);
 
-  const thumbnail = urlFor(introduction[0][0]?.thumbnail);
+  // const thumbnail = urlFor(introduction[0][0]?.thumbnail);
 
   return (
     <section className="flex flex-col px-10 xl:px-5 h-full pb-10">
       <PageTitle text="GENERAL INFO" />
-      <div className="hidden lg:flex w-full min-h-[64vh]">
+      {/* <div className="hidden lg:flex w-full min-h-[64vh]">
         <TitleView thumbnail={thumbnail} title={title[0]} />
       </div>
       <div className="flex lg:hidden w-full min-h-[64vh]">
@@ -55,7 +55,7 @@ export default async function GeneralInfoPage() {
           link="https://princetonperspectives.com/theyre-quieter-and-prettier-than-cicadas-but-spotted-lanternflies-are-a-nuisance/"
           text="To view the original article"
         />
-      </div>
+      </div> */}
     </section>
   );
 }

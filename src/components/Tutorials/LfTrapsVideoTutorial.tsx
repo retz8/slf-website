@@ -1,7 +1,6 @@
 "use client";
 
 import { LfTrapsVideoObject } from "@/model/tutorial";
-("react");
 import ParagraphSectionText from "../shared/ParagraphSectionText";
 
 type Props = {

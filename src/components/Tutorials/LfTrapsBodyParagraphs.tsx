@@ -8,7 +8,7 @@ type Props = {
 export default function LfTrapsBodyParagraphs({ paragraphs }: Props) {
   return (
     <div className="flex flex-col">
-      {paragraphs.map((item, index) => (
+      {paragraphs?.map((item, index) => (
         <ParagraphText key={`lfTraps Body ${index}`} text={item} />
       ))}
     </div>

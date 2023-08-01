@@ -1,4 +1,3 @@
-"react";
 import BodyParagraphItemMulti from "./BodyParagraphItemMulti";
 import { MultiThumbnailsParagraph } from "@/model/tutorial";
 
@@ -9,7 +8,7 @@ type Props = {
 export default function EggRemovalBodyParagraphs({ body }: Props) {
   return (
     <div className="flex flex-col">
-      {body.map((paragraph, index) => (
+      {body?.map((paragraph, index) => (
         <BodyParagraphItemMulti
           key={paragraph._key}
           paragraph={paragraph}

@@ -1,6 +1,4 @@
-import { urlFor } from "@/service/sanity";
 import Image from "next/image";
-("react");
 
 type Props = {
   thumbnails: string[];
@@ -9,10 +7,10 @@ type Props = {
 export default function LfTrapsThumbnails({ thumbnails }: Props) {
   return (
     <div className="flex flex-row gap-10">
-      {thumbnails.map((thumbnail, index) => (
+      {thumbnails?.map((thumbnail, index) => (
         <div key={`LfTraps Thumbnail ${index}`} className="flex">
           <Image
-            src={urlFor(thumbnail)}
+            src={thumbnail}
             className="object-contain"
             width={800}
             height={800}
