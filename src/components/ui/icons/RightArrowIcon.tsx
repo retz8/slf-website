@@ -1,4 +1,3 @@
-"react";
 import { BsArrowRight } from "react-icons/bs";
 
 export default function RightArrowIcon() {

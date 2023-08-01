@@ -37,5 +37,27 @@ export default {
       name: 'mainEggImage',
       type: 'image',
     },
+    {
+      title: 'About Us',
+      name: 'aboutUs',
+      type: 'text',
+    },
+    {
+      title: 'Tutorials Images',
+      name: 'tutorialsImages',
+      type: 'document',
+      fields: [
+        {
+          title: 'Egg Removal Image',
+          name: 'eggRemovalImage',
+          type: 'image',
+        },
+        {
+          title: 'Trap Image',
+          name: 'trapImage',
+          type: 'image',
+        },
+      ],
+    },
   ],
 }

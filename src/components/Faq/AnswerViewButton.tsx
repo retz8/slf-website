@@ -1,4 +1,3 @@
-"react";
 import FaqMinusIcon from "../ui/icons/FaqMinusIcon";
 import FaqPlusIcon from "../ui/icons/FaqPlusIcon";
 

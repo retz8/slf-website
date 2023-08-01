@@ -1,7 +1,5 @@
 import { Member, SimpleMember } from "@/model/member";
 import { generateFormattedRoles } from "@/utils/rolesFormatter";
-("react");
-
 type Props = SimpleMember;
 
 export default function CarouselItemFlip({ name, period, roles }: Props) {

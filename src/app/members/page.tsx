@@ -2,7 +2,7 @@
 
 import MembersGrid from "@/components/Members/MembersGrid";
 import PageTitle from "@/components/shared/PageTitle";
-import { oneWeek } from "@/utils/revalidateConstants";
+import { oneMonth } from "@/utils/revalidateConstants";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default async function MembersPage() {
   const res = await fetch(`${process.env.DEV_WEBSITE_URL}/api/members`, {
-    next: { revalidate: oneWeek },
+    next: { revalidate: oneMonth },
   });
 
   // handle error

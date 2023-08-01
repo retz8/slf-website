@@ -1,14 +1,11 @@
 "use client";
 
 import { formatNumberWithCommas } from "@/utils/numberFormatter";
-("react");
 import useSWR from "swr";
 import { outfit } from "@/utils/fonts/globalFont";
-import DataLoadingSpinner from "../ui/DataLoadingSpinner";
 
 export default function EggsRemovedNumber() {
   const { data: num, isLoading, error } = useSWR("/api/home/egg-num");
-  // data loading 에 대한 고찰이 더필요
 
   return (
     <div className="flex flex-col">

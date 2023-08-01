@@ -1,6 +1,4 @@
 import Link from "next/link";
-("react");
-
 import DonateButton from "./DonateButton";
 import Navbar from "../shared/Navbar";
 import MobileHeader from "./MobileHeader";

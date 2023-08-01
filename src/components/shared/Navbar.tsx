@@ -1,4 +1,3 @@
-"react";
 import { menu } from "@/utils/navigation/menu";
 import Link from "next/link";
 import TutorialsDropdown from "./TutorialsDropdown";

@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       maxWidth: {
-        figma: "1000px",
+        "screen-figma": "1440px",
       },
       colors: {
         "dark-brown": "#453938",

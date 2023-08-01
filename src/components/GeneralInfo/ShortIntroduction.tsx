@@ -8,30 +8,19 @@ import { splitIntoParts } from "@/utils/textFormatters";
 import Image from "next/image";
 import ltFlyPic from "../../../public/images/lt-fly.png";
 
-export default function ShortIntroduction() {
-  const {
-    data: intro,
-    isLoading,
-    error,
-  } = useSWR<IntroParagraph[]>("/api/generalInfo/intro");
+type Props = {
+  intro: IntroParagraph[];
+};
 
-  if (isLoading)
-    return (
-      <div className="flex pt-3 md:pt-0 pb-5">
-        <p className="text-dark-brown text-xl">
-          As our town grows and changes, we want to make sure our community
-          stays healthy and that we look after our blossoming plants and
-          gardens. However, an insect called the spotted lanternfly is causing
-          our plants to be in peril!
-        </p>
-      </div>
-    );
-
+export default function ShortIntroduction({ intro }: Props) {
   const firstParagraph = intro?.[0].text;
 
   return (
-    <div className="flex flex-col md:flex-row py-2 mb-5">
-      <div className="max-w-lg lg:max-w-xl xl:max-w-2xl">
+    <div
+      className="flex flex-col items-center lg:items-start
+    lg:flex-row py-2 mb-5"
+    >
+      <div className="lg:max-w-2xl">
         {firstParagraph &&
           splitIntoParts(firstParagraph).map((part, index) => (
             <div key={index} className="mb-2 py-4">
@@ -40,7 +29,7 @@ export default function ShortIntroduction() {
           ))}
       </div>
 
-      <div className="lg:absolute lg:right-28 xl:right-48 2xl:right-96 flex">
+      <div className="lg:absolute lg:right-0 flex">
         <Image
           className="object-cover"
           src={ltFlyPic}

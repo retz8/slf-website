@@ -1,4 +1,3 @@
-"react";
 import { BiMinus } from "react-icons/bi";
 
 export default function FaqMinusIcon() {

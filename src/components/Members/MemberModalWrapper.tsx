@@ -1,6 +1,3 @@
-"react";
-import CloseIcon from "../ui/icons/CloseIcon";
-
 type Props = {
   children: React.ReactNode;
   onClose: () => void;
@@ -17,9 +14,6 @@ export default function MemberModalWrapper({ onClose, children }: Props) {
         }
       }}
     >
-      {/* <button className="fixed top-0 right-0 p-8" onClick={() => onClose()}>
-        <CloseIcon />
-      </button> */}
       {children}
     </section>
   );

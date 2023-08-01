@@ -1,5 +1,4 @@
 import { BodyParagraph } from "@/model/generalInfo";
-("react");
 import ParagraphText from "../shared/ParagraphText";
 import ParagraphSectionText from "../shared/ParagraphSectionText";
 

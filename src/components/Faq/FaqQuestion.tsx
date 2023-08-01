@@ -1,5 +1,3 @@
-"react";
-
 type Props = {
   question: string;
   showAnswer: boolean;

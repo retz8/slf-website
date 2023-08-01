@@ -1,5 +1,4 @@
 import { EggsRemovedByYearPair } from "@/model/home";
-("react");
 import ListDotIcon from "../ui/icons/ListDotIcon";
 import { formatNumberWithAbbreviation } from "@/utils/numberFormatter";
 

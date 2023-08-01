@@ -1,5 +1,4 @@
 import { generateFormattedRoles } from "@/utils/rolesFormatter";
-("react");
 
 type Props = {
   name: string;

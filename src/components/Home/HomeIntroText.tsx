@@ -1,4 +1,3 @@
-"react";
 import EggsRemovedNumber from "./EggsRemovedNumber";
 import EggsRemovedList from "./EggsRemovedList";
 import { outfit } from "@/utils/fonts/globalFont";

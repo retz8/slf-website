@@ -1,4 +1,3 @@
-"react";
 import { BsDot } from "react-icons/bs";
 
 export default function ListDotIcon() {

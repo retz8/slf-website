@@ -1,24 +1,15 @@
-"use client";
-
-"react";
-import useSWR from "swr";
 import Carousel from "./Carousel";
-import DataLoadingSpinner from "../ui/DataLoadingSpinner";
 import { Member } from "@/model/member";
 import CarouselItem from "./CarouselItem";
 import Link from "next/link";
 import LinkButton from "../shared/LinkButton";
 import CarouselItemFlip from "./CarouselItemFlip";
 
-export default function MembersCarousel() {
-  const { data: members, isLoading, error } = useSWR<Member[]>("/api/members");
+type Props = {
+  members: Member[];
+};
 
-  if (isLoading) return <DataLoadingSpinner />;
-
-  const images = members?.map((member) => {
-    return member.image;
-  });
-
+export default function MembersCarousel({ members }: Props) {
   return (
     <div className="flex flex-col max-w-screen-2xl w-full items-center">
       <Carousel loop>

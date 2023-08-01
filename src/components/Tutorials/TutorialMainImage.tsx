@@ -1,4 +1,3 @@
-"react";
 import Image from "next/image";
 
 type Props = {

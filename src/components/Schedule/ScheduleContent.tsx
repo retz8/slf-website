@@ -1,8 +1,4 @@
-"use client";
-
 import { FullSchedule } from "@/model/schedule";
-import useSWR from "swr";
-import DataLoadingSpinner from "../ui/DataLoadingSpinner";
 import ScheduleList from "./ScheduleList";
 import ScheduleImage from "./ScheduleImage";
 import Link from "next/link";

@@ -1,7 +1,5 @@
 import { urlFor } from "@/service/sanity";
 import Image from "next/image";
-("react");
-
 type Props = {
   text: string;
   thumbnail?: string;

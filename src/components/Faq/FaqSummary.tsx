@@ -1,17 +1,14 @@
-"use client";
-
-import useSWR from "swr";
 import PageTitle from "../shared/PageTitle";
 import FaqList from "./FaqList";
 import Link from "next/link";
 import LinkButton from "../shared/LinkButton";
 import { Faq } from "@/model/faq";
 
-export default function FaqSummary() {
-  const { data: faqs, isLoading, error } = useSWR<Faq[]>("/api/faq");
+type Props = {
+  faqs: Faq[];
+};
 
-  if (isLoading) return <p>Loading...</p>;
-
+export default function FaqSummary({ faqs }: Props) {
   return (
     <div className="flex flex-col md:flex-row mb-12 pb-10 mt-10 md:mt-0">
       <PageTitle text="FAQ" isSummary={true} />

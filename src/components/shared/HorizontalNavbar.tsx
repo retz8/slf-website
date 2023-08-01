@@ -1,7 +1,5 @@
 import { menu } from "@/utils/navigation/menu";
 import Link from "next/link";
-("react");
-
 export default function HorizontalNavbar() {
   const baseTextStyle =
     "text-custom-white font-extrabold tracking-wider opacity-25 active:opacity-100 hover:opacity-100";

@@ -1,5 +1,4 @@
 // App Title for Mobile View (Included at Header)
-"react";
 
 export default function MobileAppTitle() {
   return (

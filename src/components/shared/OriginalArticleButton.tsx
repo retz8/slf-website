@@ -1,6 +1,5 @@
 "use client";
 
-"react";
 import RightArrowIcon from "../ui/icons/RightArrowIcon";
 
 export default function OriginalArticleButton() {

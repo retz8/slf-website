@@ -1,7 +1,5 @@
 import { MenuObjectType } from "@/utils/navigation/menu";
 import Link from "next/link";
-("react");
-
 type Props = {
   submenus: MenuObjectType[];
 };

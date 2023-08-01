@@ -1,6 +1,7 @@
 import { ParagraphTitle } from "@/model/generalInfo";
 import Image from "next/image";
 import TitleCard from "./TitleCard";
+import { urlFor } from "@/service/sanity";
 
 type Props = {
   thumbnail: string;
@@ -13,14 +14,14 @@ export default function SmallTitleView({ thumbnail, title }: Props) {
       <div className="flex justify-center">
         <Image
           className="object-cover"
-          src={thumbnail}
+          src={urlFor(thumbnail)}
           width={800}
           height={800}
           alt="introduction thumbnail"
         />
       </div>
 
-      <div className="flex mt-10">
+      <div className="flex mt-10 overflow-hidden rounded-[50px] shadow-xl">
         <TitleCard title={title} />
       </div>
     </section>

@@ -1,4 +1,3 @@
-"react";
 import HomeIntroText from "./HomeIntroText";
 import HomeIntroImage from "./HomeIntroImage";
 

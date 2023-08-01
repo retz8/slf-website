@@ -1,9 +1,6 @@
 "use client";
 
-"react";
-import classNames from "classnames";
 import LeftPrevIcon from "../ui/icons/LeftPrevIcon";
-import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
 import RightNextIcon from "../ui/icons/RightNextIcon";
 
 type Props = {

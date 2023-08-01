@@ -1,7 +1,5 @@
 import { ScheduleItem } from "@/model/schedule";
 import { addHyphenBetweenStrings } from "@/utils/textFormatters";
-("react");
-
 type Props = {
   schedule: ScheduleItem;
 };

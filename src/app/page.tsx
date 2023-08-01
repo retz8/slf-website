@@ -1,3 +1,5 @@
+// ISR (revalidate: 1 day)
+
 import FaqSummary from "@/components/Faq/FaqSummary";
 import GeneralInfoSummary from "@/components/GeneralInfo/GeneralInfoSummary";
 import AboutUs from "@/components/Home/AboutUs";
@@ -6,12 +8,72 @@ import MembersCarousel from "@/components/Members/MembersCarousel";
 import ScheduleSummary from "@/components/Schedule/ScheduleSummary";
 import TutorialsSummary from "@/components/Tutorials/TutorialsSummary";
 import PageTitle from "@/components/shared/PageTitle";
+import { generalInfoApiURL } from "@/utils/baseApiURL";
+import { oneMonth, twoWeeks } from "@/utils/revalidateConstants";
 
-// 이 페이지를 ISR로 바꿀 필요가 있다.
+async function getHomeAboutUs() {
+  const res = await fetch(`${process.env.DEV_WEBSITE_URL}/api/home/about-us`, {
+    next: { revalidate: oneMonth },
+  });
+  return res.json();
+}
 
-export default function Home() {
+async function getGeneralInfoIntroduction() {
+  const res = await fetch(`${generalInfoApiURL}/intro`, {
+    next: { revalidate: oneMonth },
+  });
+  return res.json();
+}
+
+async function getTutorialsImages() {
+  const res = await fetch(
+    `${process.env.DEV_WEBSITE_URL}/api/home/tutorial-imgs`,
+    { next: { revalidate: oneMonth } }
+  );
+  return res.json();
+}
+
+async function getSchedule() {
+  const res = await fetch(`${process.env.DEV_WEBSITE_URL}/api/schedule`, {
+    next: { revalidate: twoWeeks },
+  });
+  return res.json();
+}
+
+async function getSomeFaqs() {
+  const res = await fetch(`${process.env.DEV_WEBSITE_URL}/api/faq/some`, {
+    next: { revalidate: twoWeeks },
+  });
+  return res.json();
+}
+
+async function getMembers() {
+  const res = await fetch(`${process.env.DEV_WEBSITE_URL}/api/members`, {
+    next: { revalidate: oneMonth },
+  });
+  return res.json();
+}
+
+export default async function Home() {
+  const homeAboutUs = getHomeAboutUs();
+  const generalInfoIntro = getGeneralInfoIntroduction();
+  const tutorialsImages = getTutorialsImages();
+  const fullSchedule = getSchedule();
+  const someFaqs = getSomeFaqs();
+  const allMembers = getMembers();
+
+  const [aboutus, giIntro, tutorialImgs, schedules, faqs, members] =
+    await Promise.all([
+      homeAboutUs,
+      generalInfoIntro,
+      tutorialsImages,
+      fullSchedule,
+      someFaqs,
+      allMembers,
+    ]);
+
   return (
-    <section className="flex flex-col px-10 xl:px-5 h-full pb-10">
+    <section className="flex flex-col">
       <div className="relative flex justify-center items-center">
         {/* Main Slogan */}
         <div
@@ -27,19 +89,19 @@ export default function Home() {
         className="pb-12 pt-0 lg:pt-12 my-0 lg:my-5 
       max-w-3xl w-full mx-auto flex justify-center"
       >
-        <AboutUs />
+        <AboutUs text={aboutus} />
       </div>
 
       <div className="md:mb-2 lg:mb-10">
-        <GeneralInfoSummary />
+        <GeneralInfoSummary intro={giIntro} />
       </div>
 
       <div className="md:mb-2 lg:mb-10">
-        <TutorialsSummary />
+        <TutorialsSummary images={tutorialImgs} />
       </div>
 
       <div className="md:mb-2 lg:mb-10">
-        <ScheduleSummary />
+        <ScheduleSummary schedules={schedules} />
       </div>
 
       <div className="mb-0 md:mb-36 lg:mb-64">
@@ -51,7 +113,7 @@ export default function Home() {
           className="absolute w-full
          left-0 flex -translate-y-10 md:-translate-y-8 lg:-translate-y-6  justify-center"
         >
-          <MembersCarousel />
+          <MembersCarousel members={members} />
         </div>
       </div>
 
@@ -59,7 +121,7 @@ export default function Home() {
         className="mt-48 sm:mt-52 md:mt-56 lg:mt-64 
       pt-48 lg:pt-36"
       >
-        <FaqSummary />
+        <FaqSummary faqs={faqs} />
       </div>
     </section>
   );
