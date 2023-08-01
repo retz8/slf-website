@@ -8,7 +8,7 @@ type Props = {
 
 export default function ScheduleSummary({ schedules }: Props) {
   return (
-    <div className="flex flex-col mb-24 pb-10">
+    <div className="flex flex-col items-center mb-24 pb-10">
       <PageTitle text="Schedule" isSummary={true} />
       <div className="flex justify-center mt-5 px-5">
         {schedules !== undefined && (

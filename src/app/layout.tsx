@@ -9,11 +9,11 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    default: "Princeton SLF",
-    template: "Princeton SLF | %s",
+    default: "Princeton SLFI",
+    template: "Princeton SLFI | %s",
   },
   description:
-    "Official Website of Princeton Spotted Lanternfly (SLF) Initiative Group",
+    "Official Website of Princeton Spotted Lanternfly Initiative (SLFI)",
 };
 
 export default function RootLayout({

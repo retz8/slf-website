@@ -16,14 +16,14 @@ export default function EggsRemovedNumber() {
      text-[80px] md:text-[96px] lg:text-[108px] xl:text-[120px] 
     font-bold text-[#86BD08]`}
           >
-            Princeton SLF
+            Princeton SLFI
           </p>
           <p
             className={` block sm:hidden ${outfit.className} 
      text-[80px] md:text-[96px] lg:text-[108px] xl:text-[120px] 
     font-bold text-[#86BD08]`}
           >
-            SLF
+            PSLFI
             {/* maybe put logo instead */}
           </p>
         </div>

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default async function SchedulePage() {
-  const res = await fetch(`${process.env.WEBSITE_URL}/api/schedule`, {
+  const res = await fetch(`${process.env.DEV_WEBSITE_URL}/api/schedule`, {
     next: { revalidate: twoWeeks },
   });
 

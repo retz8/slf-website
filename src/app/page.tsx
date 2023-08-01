@@ -12,7 +12,7 @@ import { generalInfoApiURL } from "@/utils/baseApiURL";
 import { oneMonth, twoWeeks } from "@/utils/revalidateConstants";
 
 async function getHomeAboutUs() {
-  const res = await fetch(`${process.env.WEBSITE_URL}/api/home/about-us`, {
+  const res = await fetch(`${process.env.DEV_WEBSITE_URL}/api/home/about-us`, {
     next: { revalidate: oneMonth },
   });
   return res.json();
@@ -26,28 +26,28 @@ async function getGeneralInfoIntroduction() {
 }
 
 async function getTutorialsImages() {
-  const res = await fetch(`${process.env.WEBSITE_URL}/api/home/tutorial-imgs`, {
+  const res = await fetch(`${process.env.DEV_WEBSITE_URL}/api/home/tutorial-imgs`, {
     next: { revalidate: oneMonth },
   });
   return res.json();
 }
 
 async function getSchedule() {
-  const res = await fetch(`${process.env.WEBSITE_URL}/api/schedule`, {
+  const res = await fetch(`${process.env.DEV_WEBSITE_URL}/api/schedule`, {
     next: { revalidate: twoWeeks },
   });
   return res.json();
 }
 
 async function getSomeFaqs() {
-  const res = await fetch(`${process.env.WEBSITE_URL}/api/faq/some`, {
+  const res = await fetch(`${process.env.DEV_WEBSITE_URL}/api/faq/some`, {
     next: { revalidate: twoWeeks },
   });
   return res.json();
 }
 
 async function getMembers() {
-  const res = await fetch(`${process.env.WEBSITE_URL}/api/members`, {
+  const res = await fetch(`${process.env.DEV_WEBSITE_URL}/api/members`, {
     next: { revalidate: oneMonth },
   });
   return res.json();
