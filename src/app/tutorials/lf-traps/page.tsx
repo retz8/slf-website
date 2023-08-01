@@ -4,6 +4,11 @@ import LfTrapsBodyParagraphs from "@/components/Tutorials/LfTrapsBodyParagraphs"
 import LfTrapsThumbnails from "@/components/Tutorials/LfTrapsThumbnails";
 import LfTrapsVideoTutorial from "@/components/Tutorials/LfTrapsVideoTutorial";
 import PageTitle from "@/components/shared/PageTitle";
+import {
+  getLfTrapsParagraphs,
+  getLfTrapsThumbnails,
+  getLfTrapsVideoTutorial,
+} from "@/service/tutorial";
 
 import { tutorialsApiURL } from "@/utils/baseApiURL";
 import { oneMonth } from "@/utils/revalidateConstants";
@@ -37,15 +42,9 @@ async function getVideoTutorial() {
 }
 
 export default async function LfTrapsPage() {
-  const lfTrapsParagraphs = getParagraphs();
-  const lfTrapsThumbnails = getThumbnails();
-  const lfTrapsVideoTutorial = getVideoTutorial();
-
-  const [paragraphs, thumbnails, videoTutorial] = await Promise.all([
-    lfTrapsParagraphs,
-    lfTrapsThumbnails,
-    lfTrapsVideoTutorial,
-  ]);
+  const paragraphs = await getLfTrapsParagraphs();
+  const thumbnails = await getLfTrapsThumbnails();
+  const videoTutorial = await getLfTrapsVideoTutorial();
 
   return (
     <section className="flex flex-col">

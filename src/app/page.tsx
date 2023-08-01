@@ -8,68 +8,63 @@ import MembersCarousel from "@/components/Members/MembersCarousel";
 import ScheduleSummary from "@/components/Schedule/ScheduleSummary";
 import TutorialsSummary from "@/components/Tutorials/TutorialsSummary";
 import PageTitle from "@/components/shared/PageTitle";
+import { getSomeFAQs } from "@/service/faq";
+import { getIntroduction } from "@/service/generalInfo";
+import { getAboutUs, getTutorialsImages } from "@/service/home";
+import { getAllMembers } from "@/service/member";
+import { getSchedules } from "@/service/schedule";
 import { generalInfoApiURL } from "@/utils/baseApiURL";
 import { oneMonth, twoWeeks } from "@/utils/revalidateConstants";
 
-async function getHomeAboutUs() {
-  const res = await fetch(`${process.env.WEBSITE_URL}/api/home/about-us`, {
-    next: { revalidate: oneMonth },
-  });
-  return res.json();
-}
+// async function getHomeAboutUs() {
+//   const res = await fetch(`${process.env.WEBSITE_URL}/api/home/about-us`, {
+//     next: { revalidate: oneMonth },
+//   });
+//   return res.json();
+// }
 
-async function getGeneralInfoIntroduction() {
-  const res = await fetch(`${generalInfoApiURL}/intro`, {
-    next: { revalidate: oneMonth },
-  });
-  return res.json();
-}
+// async function getGeneralInfoIntroduction() {
+//   const res = await fetch(`${generalInfoApiURL}/intro`, {
+//     next: { revalidate: oneMonth },
+//   });
+//   return res.json();
+// }
 
-async function getTutorialsImages() {
-  const res = await fetch(`${process.env.WEBSITE_URL}/api/home/tutorial-imgs`, {
-    next: { revalidate: oneMonth },
-  });
-  return res.json();
-}
+// async function getTutorialsImages() {
+//   const res = await fetch(`${process.env.WEBSITE_URL}/api/home/tutorial-imgs`, {
+//     next: { revalidate: oneMonth },
+//   });
+//   return res.json();
+// }
 
-async function getSchedule() {
-  const res = await fetch(`${process.env.WEBSITE_URL}/api/schedule`, {
-    next: { revalidate: twoWeeks },
-  });
-  return res.json();
-}
+// async function getSchedule() {
+//   const res = await fetch(`${process.env.WEBSITE_URL}/api/schedule`, {
+//     next: { revalidate: twoWeeks },
+//   });
+//   return res.json();
+// }
 
-async function getSomeFaqs() {
-  const res = await fetch(`${process.env.WEBSITE_URL}/api/faq/some`, {
-    next: { revalidate: twoWeeks },
-  });
-  return res.json();
-}
+// async function getSomeFaqs() {
+//   const res = await fetch(`${process.env.WEBSITE_URL}/api/faq/some`, {
+//     next: { revalidate: twoWeeks },
+//   });
+//   return res.json();
+// }
 
-async function getMembers() {
-  const res = await fetch(`${process.env.WEBSITE_URL}/api/members`, {
-    next: { revalidate: oneMonth },
-  });
-  return res.json();
-}
+// async function getMembers() {
+//   const res = await fetch(`${process.env.WEBSITE_URL}/api/members`, {
+//     next: { revalidate: oneMonth },
+//   });
+//   return res.json();
+// }
 
 export default async function Home() {
-  const homeAboutUs = getHomeAboutUs();
-  const generalInfoIntro = getGeneralInfoIntroduction();
-  const tutorialsImages = getTutorialsImages();
-  const fullSchedule = getSchedule();
-  const someFaqs = getSomeFaqs();
-  const allMembers = getMembers();
-
-  const [aboutus, giIntro, tutorialImgs, schedules, faqs, members] =
-    await Promise.all([
-      homeAboutUs,
-      generalInfoIntro,
-      tutorialsImages,
-      fullSchedule,
-      someFaqs,
-      allMembers,
-    ]);
+  const aboutus = await getAboutUs();
+  const giIntro = await getIntroduction();
+  const tutorialImgs = await getTutorialsImages();
+  const schedules = await getSchedules();
+  const faqs = await getSomeFAQs();
+  const members = await getAllMembers();
 
   return (
     <section className="flex flex-col">

@@ -10,6 +10,11 @@ import LinkButton from "@/components/shared/LinkButton";
 import { Metadata } from "next";
 import { oneMonth } from "@/utils/revalidateConstants";
 import { generalInfoApiURL } from "@/utils/baseApiURL";
+import {
+  getBodyParagraphs,
+  getIntroduction,
+  getTitle,
+} from "@/service/generalInfo";
 
 export const metadata: Metadata = {
   title: "General Info",
@@ -17,26 +22,26 @@ export const metadata: Metadata = {
     "General Information about Spotted Lanternfly and Princeton SLF Initiative",
 };
 
-async function getTitle() {
-  const res = await fetch(`${generalInfoApiURL}/title`, {
-    next: { revalidate: oneMonth },
-  });
-  return res.json();
-}
+// async function getTitle() {
+//   const res = await fetch(`${generalInfoApiURL}/title`, {
+//     next: { revalidate: oneMonth },
+//   });
+//   return res.json();
+// }
 
-async function getIntroduction() {
-  const res = await fetch(`${generalInfoApiURL}/intro`, {
-    next: { revalidate: oneMonth },
-  });
-  return res.json();
-}
+// async function getIntroduction() {
+//   const res = await fetch(`${generalInfoApiURL}/intro`, {
+//     next: { revalidate: oneMonth },
+//   });
+//   return res.json();
+// }
 
-async function getBody() {
-  const res = await fetch(`${generalInfoApiURL}/body`, {
-    next: { revalidate: oneMonth },
-  });
-  return res.json();
-}
+// async function getBody() {
+//   const res = await fetch(`${generalInfoApiURL}/body`, {
+//     next: { revalidate: oneMonth },
+//   });
+//   return res.json();
+// }
 
 export default async function GeneralInfoPage() {
   // Change this link when the original article is updated
@@ -44,30 +49,22 @@ export default async function GeneralInfoPage() {
     "https://princetonperspectives.com/theyre-quieter-and-prettier-than-cicadas-but-spotted-lanternflies-are-a-nuisance/";
 
   // render data
-  const generalInfoTitle = getTitle();
-  const generalInfoIntro = getIntroduction();
-  const generalInfoBody = getBody();
 
-  const [title, introduction, body] = await Promise.all([
-    generalInfoTitle,
-    generalInfoIntro,
-    generalInfoBody,
-  ]);
+  const title = await getTitle();
+  const introduction = await getIntroduction();
+  const body = await getBodyParagraphs();
 
   return (
     <section className="flex flex-col">
       <PageTitle text="GENERAL INFO" />
       <div className="hidden lg:flex w-full min-h-[600px]">
-        <TitleView thumbnail={introduction[0]?.thumbnail} title={title[0]} />
+        <TitleView thumbnail={introduction[0]?.thumbnail} title={title} />
       </div>
       <div className="flex lg:hidden w-full min-h-[600px]">
-        <SmallTitleView
-          thumbnail={introduction[0]?.thumbnail}
-          title={title[0]}
-        />
+        <SmallTitleView thumbnail={introduction[0]?.thumbnail} title={title} />
       </div>
       <Introduction introduction={introduction} />
-      <BodyParagraphs body={body[0]} />
+      <BodyParagraphs body={body} />
       <div className="flex justify-end py-5 mb-10">
         <LinkButton
           link={originalArticle}

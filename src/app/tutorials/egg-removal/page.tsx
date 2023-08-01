@@ -6,41 +6,25 @@ import PageTitle from "@/components/shared/PageTitle";
 import { tutorialsApiURL } from "@/utils/baseApiURL";
 import { Metadata } from "next";
 import { oneMonth } from "@/utils/revalidateConstants";
+import {
+  getEggRemovalOtherResources,
+  getEggRemovalParagraphs,
+} from "@/service/tutorial";
 
 export const metadata: Metadata = {
   title: "Egg Removal",
   description: "How to remove Lanternfly eggs",
 };
-
-async function getParagraphs() {
-  const res = await fetch(`${tutorialsApiURL}/egg-removal/paragraphs`, {
-    next: { revalidate: oneMonth },
-  });
-  return res.json();
-}
-
-async function getResources() {
-  const res = await fetch(`${tutorialsApiURL}/egg-removal/resources`, {
-    next: { revalidate: oneMonth },
-  });
-  return res.json();
-}
-
 export default async function EggRemovalPage() {
-  const eggRemovalParagraphs = getParagraphs();
-  const eggRemovalResources = getResources();
-
-  const [paragraphs, resources] = await Promise.all([
-    eggRemovalParagraphs,
-    eggRemovalResources,
-  ]);
+  const paragraphs = await getEggRemovalParagraphs();
+  const resources = await getEggRemovalOtherResources();
 
   return (
     <section className="relative flex flex-col px-10 xl:px-5 h-full pb-10 mb-10">
       <PageTitle text="EGG REMOVAL" />
-      <EggRemovalBodyParagraphs body={paragraphs[0]} />
+      <EggRemovalBodyParagraphs body={paragraphs} />
       <div className="lg:absolute lg:bottom-0 lg:pb-20">
-        <OtherResourcesList resources={resources[0]} />
+        <OtherResourcesList resources={resources} />
       </div>
     </section>
   );

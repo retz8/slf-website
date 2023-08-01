@@ -14,7 +14,7 @@ export default function SmallTitleView({ thumbnail, title }: Props) {
       <div className="flex justify-center">
         <Image
           className="object-cover"
-          src={urlFor(thumbnail)}
+          src={thumbnail}
           width={800}
           height={800}
           alt="introduction thumbnail"

@@ -38,7 +38,7 @@ export default function BodyParagraphItemMulti({
                   }`}
                 >
                   <Image
-                    src={urlFor(thumbnail)}
+                    src={thumbnail}
                     className={`${
                       isSpecial ? "" : "w-full"
                     } mb-10 object-contain`}
