@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 export default async function FAQPage() {
-  const res = await fetch(`${process.env.DEV_WEBSITE_URL}/api/faq`, {
+  const res = await fetch(`${process.env.WEBSITE_URL}/api/faq`, {
     next: { revalidate: twoWeeks },
   });
 

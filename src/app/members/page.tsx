@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default async function MembersPage() {
-  const res = await fetch(`${process.env.DEV_WEBSITE_URL}/api/members`, {
+  const res = await fetch(`${process.env.WEBSITE_URL}/api/members`, {
     next: { revalidate: oneMonth },
   });
 

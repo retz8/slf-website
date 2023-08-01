@@ -1,5 +1,5 @@
-export const generalInfoApiURL = "http://localhost:3000/api/generalInfo";
+export const generalInfoApiURL = `${process.env.WEBSITE_URL}/api/generalInfo`;
 
-export const tutorialsApiURL = "http://localhost:3000/api/tutorials";
+export const tutorialsApiURL = `${process.env.WEBSITE_URL}/api/tutorials`;
 
-export const homeApiURL = "http://localhost:3000/api/home";
+export const homeApiURL = `${process.env.WEBSITE_URL}/api/home`;
