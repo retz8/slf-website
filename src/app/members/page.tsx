@@ -20,8 +20,11 @@ export default async function MembersPage() {
     // This will activate the closest `error.js` Error Boundary
     throw new Error("Failed to fetch data");
   }
+  console.log(res);
 
   const data = await res.json();
+
+  console.log(data);
 
   return (
     <section className="flex flex-col">
