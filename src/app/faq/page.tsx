@@ -6,7 +6,7 @@ import { getAllFAQs } from "@/service/faq";
 import { twoWeeks } from "@/utils/revalidateConstants";
 import { Metadata } from "next";
 
-export const revalidate = 3;
+export const revalidate = twoWeeks;
 
 export const metadata: Metadata = {
   title: "FAQ",

@@ -9,6 +9,10 @@ export async function getEggsRemovedByYears() {
   return client.fetch(`*[_type == "home"][0].eggsRemovedByYears`);
 }
 
+export async function getHome() {
+  return client.fetch(`*[_type == "home"][0]`);
+}
+
 export async function getMainEggImage() {
   return client
     .fetch(`*[_type == "home"][0].mainEggImage`)

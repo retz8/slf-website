@@ -1,14 +1,16 @@
-"use client";
-
 import { EggsRemovedByYearPair } from "@/model/home";
-import useSWR from "swr";
+// import useSWR from "swr";
 import EggsRemovedListItem from "./EggsRemovedListItem";
 
-export default function EggsRemovedList() {
-  const { data, isLoading, error } =
-    useSWR<EggsRemovedByYearPair[]>("/api/home/egg-nums");
+type Props = {
+  data: EggsRemovedByYearPair[];
+};
 
-  if (isLoading) return <></>;
+export default function EggsRemovedList({ data }: Props) {
+  // const { data, isLoading, error } =
+  // useSWR<EggsRemovedByYearPair[]>("/api/home/egg-nums");
+
+  // if (isLoading) return <></>;
 
   return (
     <div className="flex flex-col py-8">
