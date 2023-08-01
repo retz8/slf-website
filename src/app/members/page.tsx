@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: "Members of Princeton SLF Initiative Group",
 };
 
-export default async function MembersPage() {
+const MembersPage = async () => {
   const res = await fetch(`${process.env.WEBSITE_URL}/api/members`, {
     next: { revalidate: oneMonth },
   });
@@ -35,4 +35,6 @@ export default async function MembersPage() {
       </div>
     </section>
   );
-}
+};
+
+export default MembersPage;
