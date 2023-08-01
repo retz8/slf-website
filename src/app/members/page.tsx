@@ -13,23 +13,7 @@ export const metadata: Metadata = {
 };
 
 export default async function MembersPage() {
-  // const res = await fetch("/api/members", {
-  //   next: { revalidate: oneMonth },
-  // });
-
-  // // handle error
-  // if (!res.ok) {
-  //   // This will activate the closest `error.js` Error Boundary
-  //   throw new Error("Failed to fetch data");
-  // }
-  // console.log(res);
-
-  // const data = await res.json();
-
-  // console.log(data);
-
   const members = await getAllMembers();
-  console.log(members);
 
   return (
     <section className="flex flex-col">

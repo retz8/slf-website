@@ -2,6 +2,7 @@
 
 import ScheduleContent from "@/components/Schedule/ScheduleContent";
 import PageTitle from "@/components/shared/PageTitle";
+import { getSchedules } from "@/service/schedule";
 import { twoWeeks } from "@/utils/revalidateConstants";
 import { Metadata } from "next";
 
@@ -11,17 +12,7 @@ export const metadata: Metadata = {
 };
 
 export default async function SchedulePage() {
-  const res = await fetch(`${process.env.WEBSITE_URL}/api/schedule`, {
-    next: { revalidate: twoWeeks },
-  });
-
-  // handle error
-  if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error("Failed to fetch data");
-  }
-
-  const data = await res.json();
+  const data = await getSchedules();
 
   return (
     <section className="flex flex-col">
