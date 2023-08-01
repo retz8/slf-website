@@ -15,7 +15,7 @@ import { getAllMembers } from "@/service/member";
 import { getSchedules } from "@/service/schedule";
 import { oneDay } from "@/utils/revalidateConstants";
 
-export const revalidate = oneDay;
+export const revalidate = 5;
 
 export default async function Home() {
   const aboutus = await getAboutUs();
