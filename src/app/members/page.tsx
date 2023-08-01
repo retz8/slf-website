@@ -1,11 +1,12 @@
-// ISR (revalidate: 1 week)
+// ISR (revalidate: 1 month)
 
 import MembersGrid from "@/components/Members/MembersGrid";
 import PageTitle from "@/components/shared/PageTitle";
-import { Member } from "@/model/member";
 import { getAllMembers } from "@/service/member";
 import { oneMonth } from "@/utils/revalidateConstants";
-import { GetStaticProps, InferGetStaticPropsType, Metadata } from "next";
+import { Metadata } from "next";
+
+export const revalidate = oneMonth;
 
 export const metadata: Metadata = {
   title: "Members",
@@ -25,17 +26,3 @@ export default async function MembersPage() {
     </section>
   );
 }
-
-// export const getStaticProps: GetStaticProps<{
-//   members: Member[];
-// }> = async () => {
-//   console.log("check");
-//   const members = await getAllMembers();
-
-//   console.log(members);
-//   return {
-//     props: {
-//       members,
-//     },
-//   };
-// };

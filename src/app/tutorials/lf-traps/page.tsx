@@ -10,7 +10,6 @@ import {
   getLfTrapsVideoTutorial,
 } from "@/service/tutorial";
 
-import { tutorialsApiURL } from "@/utils/baseApiURL";
 import { oneMonth } from "@/utils/revalidateConstants";
 import { Metadata } from "next";
 
@@ -20,26 +19,7 @@ export const metadata: Metadata = {
     "Tutorial on Lanternfly traps including photos and youtube video",
 };
 
-async function getParagraphs() {
-  const res = await fetch(`${tutorialsApiURL}/lf-traps/paragraphs`, {
-    next: { revalidate: oneMonth },
-  });
-  return res.json();
-}
-
-async function getThumbnails() {
-  const res = await fetch(`${tutorialsApiURL}/lf-traps/thumbnails`, {
-    next: { revalidate: oneMonth },
-  });
-  return res.json();
-}
-
-async function getVideoTutorial() {
-  const res = await fetch(`${tutorialsApiURL}/lf-traps/video`, {
-    next: { revalidate: oneMonth },
-  });
-  return res.json();
-}
+export const revalidate = oneMonth;
 
 export default async function LfTrapsPage() {
   const paragraphs = await getLfTrapsParagraphs();

@@ -11,6 +11,8 @@ export const metadata: Metadata = {
   description: "Monthly schedule of Princeton SLF Campaign",
 };
 
+export const revalidate = twoWeeks;
+
 export default async function SchedulePage() {
   const data = await getSchedules();
 

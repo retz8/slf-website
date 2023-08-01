@@ -9,7 +9,6 @@ import LinkButton from "@/components/shared/LinkButton";
 
 import { Metadata } from "next";
 import { oneMonth } from "@/utils/revalidateConstants";
-import { generalInfoApiURL } from "@/utils/baseApiURL";
 import {
   getBodyParagraphs,
   getIntroduction,
@@ -22,26 +21,7 @@ export const metadata: Metadata = {
     "General Information about Spotted Lanternfly and Princeton SLF Initiative",
 };
 
-// async function getTitle() {
-//   const res = await fetch(`${generalInfoApiURL}/title`, {
-//     next: { revalidate: oneMonth },
-//   });
-//   return res.json();
-// }
-
-// async function getIntroduction() {
-//   const res = await fetch(`${generalInfoApiURL}/intro`, {
-//     next: { revalidate: oneMonth },
-//   });
-//   return res.json();
-// }
-
-// async function getBody() {
-//   const res = await fetch(`${generalInfoApiURL}/body`, {
-//     next: { revalidate: oneMonth },
-//   });
-//   return res.json();
-// }
+export const revalidate = oneMonth;
 
 export default async function GeneralInfoPage() {
   // Change this link when the original article is updated

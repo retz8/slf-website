@@ -24,7 +24,7 @@ export default function MemberModal({ member }: Props) {
 
       <div className="basis-2/3 ml-3 w-full max-h-full flex flex-col items-start ">
         <MemberInfo name={name} period={period} roles={roles} isModal={true} />
-        <div className="overflow-y-scroll">
+        <div className="overflow-y-auto">
           {introduction !== undefined && (
             <p className="mt-1 text-clip overflow-hidden whitespace-normal text-custom-white">
               {introduction}

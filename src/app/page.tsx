@@ -13,50 +13,9 @@ import { getIntroduction } from "@/service/generalInfo";
 import { getAboutUs, getTutorialsImages } from "@/service/home";
 import { getAllMembers } from "@/service/member";
 import { getSchedules } from "@/service/schedule";
-import { generalInfoApiURL } from "@/utils/baseApiURL";
-import { oneMonth, twoWeeks } from "@/utils/revalidateConstants";
+import { oneDay } from "@/utils/revalidateConstants";
 
-// async function getHomeAboutUs() {
-//   const res = await fetch(`${process.env.WEBSITE_URL}/api/home/about-us`, {
-//     next: { revalidate: oneMonth },
-//   });
-//   return res.json();
-// }
-
-// async function getGeneralInfoIntroduction() {
-//   const res = await fetch(`${generalInfoApiURL}/intro`, {
-//     next: { revalidate: oneMonth },
-//   });
-//   return res.json();
-// }
-
-// async function getTutorialsImages() {
-//   const res = await fetch(`${process.env.WEBSITE_URL}/api/home/tutorial-imgs`, {
-//     next: { revalidate: oneMonth },
-//   });
-//   return res.json();
-// }
-
-// async function getSchedule() {
-//   const res = await fetch(`${process.env.WEBSITE_URL}/api/schedule`, {
-//     next: { revalidate: twoWeeks },
-//   });
-//   return res.json();
-// }
-
-// async function getSomeFaqs() {
-//   const res = await fetch(`${process.env.WEBSITE_URL}/api/faq/some`, {
-//     next: { revalidate: twoWeeks },
-//   });
-//   return res.json();
-// }
-
-// async function getMembers() {
-//   const res = await fetch(`${process.env.WEBSITE_URL}/api/members`, {
-//     next: { revalidate: oneMonth },
-//   });
-//   return res.json();
-// }
+export const revalidate = oneDay;
 
 export default async function Home() {
   const aboutus = await getAboutUs();

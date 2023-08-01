@@ -3,13 +3,14 @@
 import OtherResourcesList from "@/components/Tutorials/OtherResourcesList";
 import EggRemovalBodyParagraphs from "@/components/Tutorials/EggRemovalBodyParagraphs";
 import PageTitle from "@/components/shared/PageTitle";
-import { tutorialsApiURL } from "@/utils/baseApiURL";
 import { Metadata } from "next";
 import { oneMonth } from "@/utils/revalidateConstants";
 import {
   getEggRemovalOtherResources,
   getEggRemovalParagraphs,
 } from "@/service/tutorial";
+
+export const revalidate = oneMonth;
 
 export const metadata: Metadata = {
   title: "Egg Removal",
