@@ -4,6 +4,7 @@ import Navbar from "../shared/Navbar";
 import MobileHeader from "./MobileHeader";
 import Image from "next/image";
 
+// header
 export default function Header() {
   return (
     <div className="w-full">
