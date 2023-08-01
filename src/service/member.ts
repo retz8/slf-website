@@ -1,7 +1,7 @@
 import { client, urlFor } from "./sanity";
 import { Member } from "@/model/member";
 
-export async function getAllMembers(): Promise<Member[]> {
+export async function getAllMembers() {
   return client
     .fetch(
       `*[_type == "member"] | order(_createdAt asc){
