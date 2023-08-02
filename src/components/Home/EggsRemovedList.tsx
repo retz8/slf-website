@@ -7,11 +7,6 @@ type Props = {
 };
 
 export default function EggsRemovedList({ data }: Props) {
-  // const { data, isLoading, error } =
-  // useSWR<EggsRemovedByYearPair[]>("/api/home/egg-nums");
-
-  // if (isLoading) return <></>;
-
   return (
     <div className="flex flex-col py-8">
       {data?.map((item, index) => (

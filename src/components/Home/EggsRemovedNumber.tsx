@@ -7,8 +7,6 @@ type Props = {
 };
 
 export default function EggsRemovedNumber({ number, isLoading }: Props) {
-  // const { data: num, isLoading, error } = useSWR("/api/home/egg-num");
-
   return (
     <div className="flex flex-col">
       {isLoading ? (
