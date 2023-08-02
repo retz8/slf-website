@@ -3,8 +3,12 @@
 import useSWR from "swr";
 import Image from "next/image";
 
-export default function HomeIntroImage() {
-  const { data: image, isLoading, error } = useSWR<string>("/api/home/egg-img");
+export default function HomeIntroImage({ param }: { param: string }) {
+  const {
+    data: image,
+    isLoading,
+    error,
+  } = useSWR<string>(`/api/home/${param}`);
 
   if (isLoading) return <></>;
 

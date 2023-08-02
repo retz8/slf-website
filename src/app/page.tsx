@@ -34,7 +34,7 @@ export default async function Home() {
           left-1/2 transform -translate-x-1/2 h-[85%] lg:h-full"
         ></div>
         <div className="relative z-10">
-          <HomeIntro />
+          <HomeIntro param="all" />
         </div>
       </div>
 
