@@ -1,7 +1,7 @@
 # Princeton SLFI Website
 <img width="1479" alt="스크린샷 2025-02-07 오후 9 54 57" src="https://github.com/user-attachments/assets/e1d0299b-833b-44bc-a699-6c86ac52b6ee" />
 
-
+## Introduction
 The official website of [Princeton SLFI](https://princetonperspectives.com/theyre-quieter-and-prettier-than-cicadas-but-spotted-lanternflies-are-a-nuisance/), a local volunteer group in Princeton, NJ. SLFI developed a drone detection method and low-cost traps to remove invasive species, Spotted Lanternflies.
 
 **Dev Period:** 2023.03 ~ 2023.07  
