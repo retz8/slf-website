@@ -28,8 +28,6 @@ During my senior year of high school, a friend leading a volunteer initiative as
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![Sanity](https://img.shields.io/badge/Sanity-F03E2F?style=for-the-badge&color=F03E2F)
 ### Deploy
 ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) ![Sanity Studio](https://img.shields.io/badge/SanityStudio-F03E2F?style=for-the-badge&color=F03E2F)
-### Communication
-![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) ![Slack](https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white)
 
 ## Getting Started
 ### Installation
