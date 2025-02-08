@@ -29,5 +29,19 @@ During my senior year of high school, a friend leading a volunteer initiative as
 ### Deploy
 ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) ![Sanity Studio](https://img.shields.io/badge/SanityStudio-F03E2F?style=for-the-badge&color=F03E2F)
 ### Communication
+![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) ![Slack](https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white)
+
+## Getting Started
+### Installation
+```bash
+$ git clone https://github.com/retz8/princeton-slfi
+$ cd princeton-slfi
+$ npm install
+```
+
+### Development
+```bash
+$ npm run dev
+```
 
 
