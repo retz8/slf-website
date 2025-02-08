@@ -7,6 +7,9 @@ The official website of [Princeton SLFI](https://princetonperspectives.com/theyr
 **Dev Period:** 2023.03 ~ 2023.07  
 **Team:** 1 Product Owner (PO), 1 Fullstack Developer (Me), 1 Designer
 
+## Deployment
+[Princeton SLFI Website](https://www.princetonlanternfly.org/)
+
 ## Motivation
 During my senior year of high school, a friend leading a volunteer initiative asked me to build a website for their project. Seeing its potential to support environmental efforts, I took on the challenge. 
 
@@ -24,7 +27,7 @@ During my senior year of high school, a friend leading a volunteer initiative as
 ### Development
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![Sanity](https://img.shields.io/badge/Sanity-F03E2F?style=for-the-badge&color=F03E2F)
 ### Deploy
-
+![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) ![Sanity Studio](https://img.shields.io/badge/SanityStudio-F03E2F?style=for-the-badge&color=F03E2F)
 ### Communication
 
 
