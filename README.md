@@ -22,7 +22,7 @@ During my senior year of high school, a friend leading a volunteer initiative as
 
 ## Stacks
 ### Development
-![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![Sanity](https://img.shields.io/badge/Sanity-F03E2F?style=flat&color=F03E2F)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![Sanity](https://img.shields.io/badge/Sanity-F03E2F?style=for-the-badge&color=F03E2F)
 ### Deploy
 
 ### Communication
