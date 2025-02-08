@@ -12,7 +12,7 @@ During my senior year of high school, a friend leading a volunteer initiative as
 
 ## Contributions
 ### Development
-- Implement various UI components, including Carousel, Dropdown Menu, and Accordion
+- Implement bare UI components with CSS, including Carousel, Dropdown Menu, and Accordion
 - Used a hybrid approach of SSR pages and CSR components to improve content loading speed
 - Integrated Content Management System (CMS) with admin dashboard for non-developers
 
