@@ -4,9 +4,8 @@
 The official website for Princeton Spotted Lanternfly Initiative (SLFI). Princeton SLFI is a local volunteer group in Princeton, NJ, to remove invasive species "Spotted Lanternflies" by drone detection and low-cost traps.
 
 
-2023.03 ~ 2023.07
-
-Project Owner 1, **Full Stack (Myself)**, Designer 1
+> Dev Period: 2023.03 ~ 2023.07
+> Team: 1 Product Owner (PO), 1 Fullstack Developer (Me), 1 Designer
 
 
 [View Article about Princeton SLFI](https://princetonperspectives.com/theyre-quieter-and-prettier-than-cicadas-but-spotted-lanternflies-are-a-nuisance/)
