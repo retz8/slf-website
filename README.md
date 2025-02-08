@@ -17,7 +17,7 @@ During my senior year of high school, a friend leading a volunteer initiative as
 ### Development
 - Implement various UI components with CSS, including Carousel, Dropdown Menu, and Accordion
 - Used a hybrid approach of SSR pages and CSR components to improve content loading speed
-- Integrated Content Management System (CMS) with admin dashboard for non-developers
+- Integrated Content Management System (CMS) based on GROQ Query with admin dashboard for non-developers
 
 ### Collaboration
 - Create a low-fidelity Wireframe with Figma to collaborate with the UI designer
